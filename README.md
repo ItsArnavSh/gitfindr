@@ -1,196 +1,117 @@
-### The Problem with Current GitHub Search
+# 🚀 GitFindr
 
-The current GitHub search functionality is limited in several key ways:
+### 🔍 The Problem with Current GitHub Search
+GitHub's search functionality has several limitations that make it difficult for developers to discover relevant repositories:
 
-1. Reliance on Names, Languages, and Descriptions:  
+1. **Over-Reliance on Metadata**  
+   - Search results depend heavily on repository names, languages, and descriptions.
+   - Repositories with vague or incomplete descriptions are often overlooked.
 
-    GitHub search primarily depends on repository names, languages, and descriptions. If the repository lacks a well-detailed description or does not include relevant keywords, users are unable to find it. This severely limits search accuracy and comprehensiveness.
+2. **Lack of Support for Synonyms & Acronyms**  
+   - Searching for *"JS tools"* vs. *"JavaScript tools"* can yield different results.
+   - This inconsistency makes searching frustrating and inefficient.
 
-    
+---
 
-2. No Support for Acronyms or Synonyms:  
+## ✅ Our Solution
+We are building an advanced search engine that enhances GitHub's search capabilities by:
 
-    The search results are overly keyword-dependent. For instance, searching for "JS tools" and "JavaScript tools" yields different results depending on the exact phrasing used in the repository metadata. This inconsistency is frustrating and inefficient.
+### 🏗 **Workflow Overview**
+Our system consists of two main components:
 
-    
+1. **🌐 FastAPI Python Server**  
+   - Accepts repository links from users.  
+   - Downloads and extracts README.md content.  
+   - Processes README into a **list of words** for further analysis.
 
+2. **🚀 Go Backend Engine**  
+   - Converts the processed words into a **list of indexed terms** for synonym matching.  
+   - Utilizes **Redis for caching** synonym lookups.  
+   - Incorporates GitHub statistics like **languages, stars, and forks** to enhance ranking.  
+   - Implements a **modified BM25 algorithm** for weighted frequency, considering additional repository metadata beyond just keywords.  
+   - Stores an **inverted index in SQLite** for efficient searching.
 
-### Our Solution
+---
 
-We aim to address these limitations by developing an advanced search engine that indexes repositories more comprehensively and delivers accurate results using the following features:
+## 📦 Building a Repository Database
+We collect repositories using three methods:
 
-1. Leverage README.md Files:  
+1. **🌐 Web Crawling**  
+   - Crawl developer websites for repository links.  
+   - Recursively follow discovered GitHub links to index repositories.
 
-    README.md files often contain detailed descriptions of repositories, including key features, use cases, and other contextual information. By indexing the content of these files, we can provide a far richer and more relevant search experience.
+2. **📝 Manual Submission**  
+   - Allow users to submit repositories directly to our search database.
 
-    
+3. **🔗 GitHub Search API**  
+   - Use the GitHub API to identify and add repositories.
+   - The API is rate-limited, but it provides a valuable starting point.
 
-### Building the Repository Database
+---
 
-To collect a comprehensive list of repositories for indexing, we will incorporate three methods:
+## ⚙️ Preprocessing Repositories
+After collecting repositories, we process the data using the FastAPI Python server:
 
-1. Web Crawling:
+1. **📖 Normalization & Tokenization**  
+   - Extract text from README files.
+   - Convert content into a normalized list of words by stemming and removing stopwords.
 
-    
+2. **🚫 Duplicate Detection**  
+   - Compute a **SHA-256 hash** of repository content to detect and prevent duplicate indexing.
 
-    - Crawl developer websites to find repository links.
+3. **✅ Typo Correction**  
+   - Perform spell-checking and autocorrection for better search accuracy.
 
-        
+---
 
-    - If a standard link is discovered, recursively crawl for additional links.
+## 🔄 Handling Synonyms & Acronyms with Redis
+To enhance search flexibility, we use Redis for synonym clustering:
 
-        
+1. **🗂️ Synonym Clustering**  
+   - Map words like *"js"* and *"javascript"* to the same ID.
+   - If a word is missing, fetch synonyms via an external API.
 
-    - If a GitHub repository link is identified, save it directly to the database for processing.
+2. **⚡ Efficient Caching**  
+   - Cache API responses in Redis for quick lookups.
+   - Store queries as **SHA-256 hashed keys** to avoid redundant API calls.
 
-        
+---
 
-2. Manual Submission:
+## 📊 Building the Inverted Index
+To enable fast and efficient searches, we construct an **inverted index**:
 
-    
+- Stored in **SQLite** with three columns:
+  - **Word Index** → A unique identifier (e.g., Redis ID)
+  - **Frequency** → Number of times the word appears in a repository
+  - **Repositories** → A list of repositories containing the word
 
-    - Provide users with the option to manually add repositories to the search database.
+---
 
-        
+## 📈 Search Ranking & Results
+Search results are ranked using a **modified BM25 algorithm** that considers:
 
-    - This feature ensures inclusion of repositories that might otherwise be missed by automated methods.
+1. **🔎 Weighted Frequency**  
+   - Matches user queries with indexed words, adjusted for their significance.
 
-        
+2. **⭐ Repository Popularity**  
+   - Factors in GitHub stats like **stars, forks, and contributors** as ranking signals.
 
-3. GitHub Search API:
+3. **📅 Recent Activity & Additional Metrics**  
+   - Prioritizes active repositories and relevant language usage.
 
-    
+---
 
-    - Utilize the GitHub Search API to identify repositories.
+## 🎯 Why This Matters
+By solving GitHub's search limitations, we provide developers with:
+✅ **More accurate results** – Even when descriptions are missing.  
+✅ **Support for synonyms & typos** – Making search more flexible.  
+✅ **Efficient ranking** – Prioritizing quality repositories.
 
-        
+---
 
-    - Although the API is rate-limited, it can still serve as a valuable tool to bootstrap and expand the repository database.
+## 📌 Future Development
+- 🔄 Implementing **real-time updates** for repository changes.
+- 🔍 Adding **semantic search** for deeper understanding of queries.
+- 🌐 Providing **a web interface** for easy access.
 
-        
-
-### Preprocessing Repositories
-
-Once repositories are collected, we preprocess the data using a Python script:
-
-1. Normalization and Tokenization:
-
-    
-
-    - Extract text data from README.md files.
-
-        
-
-    - Convert the content into a normalized list of words by stemming and removing common stopwords (e.g., "a," "an," "the").
-
-        
-
-2. Duplicate Detection:
-
-    
-
-    - Compute the SHA-256 hash of the text from each repository.
-
-        
-
-    - Check the hash against an existing database to detect duplicates and prevent redundant indexing.
-
-        
-
-3. Typo Correction:
-
-    
-
-    - Perform spell checking and autocorrect typos to ensure accurate indexing.
-
-        
-
-### Handling Synonyms and Acronyms with Redis
-
-To address the issue of synonyms and acronyms, we use Redis to maintain synonym clusters:
-
-1. Synonym Clustering:
-
-    
-
-    - Store synonyms and acronyms in Redis with unique IDs (e.g., "js" and "javascript" both map to the same ID, such as 23).
-
-        
-
-    - If a word is not found in Redis, we use an external API to fetch synonyms (e.g., "great" might return "good," "amazing," etc.).
-
-        
-
-2. Efficient Caching:
-
-    
-
-    - Cache API responses in Redis by hashing the original query word to create a unique key (e.g., SHA-256 hash of the word).
-
-        
-
-    - This ensures quick lookup and avoids redundant API calls for synonyms encountered in the future.
-
-        
-
-### Building the Inverted Index
-
-We construct an inverted index to map words to repositories:
-
-1. Structure:
-
-    
-
-    - The index is stored in SQLite with three columns:
-
-        
-
-        - Word Index: The unique identifier for each word (e.g., the Redis ID).
-
-            
-
-        - Frequency: The number of times the word appears in the repository.
-
-            
-
-        - Repositories: A list of repositories where the word appears.
-
-            
-
-2. Purpose:
-
-    
-
-    - This index allows for efficient lookups, enabling users to quickly find repositories based on the occurrence and relevance of search terms.
-
-        
-
-### Search Ranking and Results
-
-For ranking search results, we will implement a formula that combines:
-
-1. Pattern Matching:
-
-    
-
-    - Match the user’s search query with indexed words and phrases.
-
-        
-
-2. Repository Popularity:
-
-    
-
-    - Factor in repository metadata such as the number of stars and forks to rank results by relevance and popularity.
-
-        
-
-3. Additional Criteria:
-
-    
-
-    - Integrate other metrics, such as recent activity or language-specific usage, to further refine results.
-
-        
-
-By addressing the limitations of existing GitHub search tools, our solution will offer developers an intuitive and powerful way to discover repositories, regardless of keyword variations, typos, or incomplete descriptions.
+🚀 **Stay tuned for updates!**
