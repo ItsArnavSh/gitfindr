@@ -40,3 +40,18 @@ type reposWeighUnweigh struct {
 	Unweighted int `json:"unweighted"`
 	Repo       int `json:"repoid"`
 }
+
+// For Bm25
+type InvertedIndex struct {
+	TermID            int                 `json:"termID"`
+	ReposWeighUnweigh []reposWeighUnweigh `json:"reposWeighUnweigh"`
+	DFI               int                 `json:"dfi"`
+	IDF               float64             `json:"idf"`
+}
+type Document struct {
+	DocID     int
+	Name      string
+	Link      string
+	Alt       float64
+	DocLength int
+}

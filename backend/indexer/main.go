@@ -31,5 +31,6 @@ func init() {
 	InitCache()
 }
 func main() {
-	index("https://github.com/ItsArnavSh/gitfindr")
+	//index("https://github.com/ItsArnavSh/gitfindr")
+	bm25("github")
 }
