@@ -24,3 +24,19 @@ type RepoInfo struct {
 	TotalCommits int      `json:"total_commits"`
 	LastCommit   string   `json:"last_commit_date"`
 }
+
+//Used in indexing
+
+type wordWeigher struct {
+	freqMap map[int]int
+	weight  int
+}
+type weighUnweigh struct {
+	weighted   map[int]int
+	unweighted map[int]int
+}
+type reposWeighUnweigh struct {
+	Weighted   int `json:"weighted"`
+	Unweighted int `json:"unweighted"`
+	Repo       int `json:"repoid"`
+}
