@@ -112,5 +112,5 @@ func main() {
 	// wg.Wait()
 	app := setupServer()
 	log.Fatal(app.Listen(":3000"))
-	fmt.Println(bm25("Chess in react"))
+	//fmt.Println(bm25("Chess in react"))
 }
