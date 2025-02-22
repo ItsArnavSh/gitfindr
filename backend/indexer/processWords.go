@@ -18,6 +18,7 @@ type techWord struct {
 }
 
 func goClusterer(terms []string) []int {
+
 	//Process the words just in case
 	for i := range terms {
 		terms[i] = strings.ToLower(terms[i])
@@ -29,12 +30,13 @@ func goClusterer(terms []string) []int {
 	//Get the list of synonyms and chill then
 	var cluster []int
 	for _, word := range terms {
+		fmt.Println("Processing ", word)
 		res, err := rdb.Exists(ctx, word).Result()
 		if err != nil {
 			log.Fatal(err)
 		}
 		if res > 0 {
-			fmt.Println(word, " Already Exists")
+			//fmt.Println(word, " Already Exists")
 			//The term exists already
 			//rawval, _ := rdb.Get(ctx, word.Term).Result()
 			value, err := FetchList(word)
@@ -52,7 +54,7 @@ func goClusterer(terms []string) []int {
 			//Now we have to see which category it belongs to and act accordingly
 			rawval, _ := rdb.Get(ctx, "last_index").Result()
 			lastIndex, _ := strconv.Atoi(rawval)
-			fmt.Println("Setting " + word + " Common")
+			//fmt.Println("Setting " + word + " Common")
 			time.Sleep(200 * time.Millisecond) //Avoid Rate limit
 			synonyms := getSynonyms(word)
 			lastIndex++
@@ -60,7 +62,7 @@ func goClusterer(terms []string) []int {
 			AppendIntToRedisList(word, lastIndex)
 
 			for _, syn := range synonyms {
-				fmt.Println("Saving ", syn, " at ", lastIndex)
+				//fmt.Println("Saving ", syn, " at ", lastIndex)
 				//rdb.Set(ctx, syn, lastIndex, -1)
 				AppendIntToRedisList(syn, lastIndex)
 			}

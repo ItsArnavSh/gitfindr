@@ -3,7 +3,6 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"log"
 	"sort"
 
 	_ "github.com/glebarez/go-sqlite"
@@ -11,7 +10,7 @@ import (
 
 var k float64 = 1.5
 
-func bm25(query string) {
+func bm25(query string) []string {
 	normalizedQuery := parseWords(query)
 	queryTermIDs := make(map[int]bool) // Unique query term IDs
 	var indexes []int
@@ -45,23 +44,23 @@ func bm25(query string) {
 		emRowData, emErr := getemInvertedIndex(termID) // Fetch extra BM25 index
 
 		if err != nil {
-			fmt.Println("Error Querying getInvertedIndex")
-			log.Fatal(err)
+			fmt.Printf("Warning: No data found for TermID %d, skipping...\n", termID)
+			continue // Skip processing this termID
 		}
 		if emErr != nil {
-			fmt.Println("Error Querying getemInvertedIndex")
-			log.Fatal(emErr)
+			fmt.Printf("Warning: No extended data found for TermID %d, skipping extra weight...\n", termID)
+			emRowData = nil // Continue without the extra index
 		}
 
 		// Combine both sources
-		processBM25Data(rowData, bmScores, docTermSet, docDetails, termID, 1.0)   // Normal weight
-		processBM25Data(emRowData, bmScores, docTermSet, docDetails, termID, 2.0) // Double weight
+		processBM25Data(rowData, bmScores, docTermSet, docDetails, termID, 1.0)    // Normal weight
+		processBM25Data(emRowData, bmScores, docTermSet, docDetails, termID, 10.0) // Double weight
 	}
 
 	// Step 3: Apply a boost if ALL query term IDs exist in the document
 	for docID := range bmScores {
 		if len(docTermSet[docID]) == queryTermCount {
-			bmScores[docID] *= 1 // Adjust boost factor if needed
+			bmScores[docID] *= 1.5 // Adjust boost factor if needed
 			docDetails[docID] = append(docDetails[docID], fmt.Sprintf("Boost applied (all terms present) | New Score: %.4f", bmScores[docID]))
 		}
 	}
@@ -85,7 +84,7 @@ func bm25(query string) {
 	}
 
 	// Display final results
-	displayResults(sortedDocs)
+	return displayResults(sortedDocs)
 }
 
 // Helper function to process BM25 data with weighting
@@ -195,16 +194,19 @@ func getemInvertedIndex(termID int) (*InvertedIndex, error) {
 	return &index, nil
 }
 
-func displayResults(sortedDocIDs []int) {
+func displayResults(sortedDocIDs []int) []string {
 	fmt.Println("\nTop Results:")
+	var data []string
 	for _, docID := range sortedDocIDs {
 		name, link, err := getDocument(docID)
 		if err != nil {
 			fmt.Println("Error fetching document:", err)
 			continue
 		}
+		data = append(data, link)
 		fmt.Printf("DocID: %d | Name: %s | Link: %s\n", docID, name, link)
 	}
+	return data
 }
 func getDocument(docID int) (string, string, error) {
 	query := `SELECT name, link FROM documents WHERE docID = ?`
@@ -241,4 +243,12 @@ func sortDocsByBM25(bmScores map[int]float64) []int {
 		sortedDocIDs = append(sortedDocIDs, doc.DocID)
 	}
 	return sortedDocIDs
+}
+func ClearQueue() {
+	err := rdb.Del(ctx, QUEUE_NAME).Err()
+	if err != nil {
+		fmt.Println("Error clearing queue:", err)
+	} else {
+		fmt.Println("Queue cleared successfully.")
+	}
 }

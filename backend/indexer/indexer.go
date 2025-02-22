@@ -23,6 +23,7 @@ func index(link string) {
 		return
 	}
 	indexer(indexList, emIndexList, *repoInfo, link)
+	fmt.Println("Done ", repoInfo.Name)
 }
 func indexer(indexList []int, emIndexList []int, repoInfo RepoInfo, link string) {
 	docLen := len(indexList)
