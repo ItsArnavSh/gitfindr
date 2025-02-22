@@ -5,7 +5,7 @@ import patharImg from "./assets/background.png"
 export default function Search() {
     return (
         <div className="min-h-screen w-full bg-[#0D1117] flex flex-col items-center justify-center px-4 py-8 space-y-8">
-            <div className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white text-center font-['Roboto']">
+            <div className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white text-center font-['Roboto'] ">
                 GitFindr
             </div>
             <div className="w-full max-w-md mx-auto">
