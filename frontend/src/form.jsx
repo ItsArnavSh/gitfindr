@@ -1,10 +1,9 @@
-import React from 'react';
-import './form.css';
+import React from "react";
+import "./form.css";
 
 function Form() {
   return (
     <div className="form-container">
-      
       <div id="poda">
         <div className="glow"></div>
         <div className="darkBorderBg"></div>
@@ -13,7 +12,12 @@ function Form() {
         <div className="white"></div>
         <div className="border"></div>
         <div id="main">
-          <input placeholder="Search..." type="text" name="text" className="input" />
+          <input
+            placeholder="Search..."
+            type="text"
+            name="text"
+            className="input"
+          />
           <div id="input-mask"></div>
           <div id="pink-mask"></div>
           <div className="filterBorder"></div>

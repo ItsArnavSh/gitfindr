@@ -1,11 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 :root {
-  --font-roboto: "Roboto", sans-serif;
+    --font-roboto: "Roboto", sans-serif;
 }
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
+.funnel {
+    font-family: "Funnel Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
