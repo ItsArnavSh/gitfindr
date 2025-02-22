@@ -110,5 +110,7 @@ func main() {
 	// //go producerFromFile(&wg, "data.txt")
 	// go consumer(&wg)
 	// wg.Wait()
+	app := setupServer()
+	log.Fatal(app.Listen(":3000"))
 	fmt.Println(bm25("Chess in react"))
 }
