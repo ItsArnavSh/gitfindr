@@ -22,4 +22,3 @@ async function searchQuery(query) {
     }
 }
 
-searchQuery("chess engine")
