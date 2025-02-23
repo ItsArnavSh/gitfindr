@@ -1,117 +1,130 @@
 # 🚀 GitFindr
 
-### 🔍 The Problem with Current GitHub Search
-GitHub's search functionality has several limitations that make it difficult for developers to discover relevant repositories:
+### 🔎 The Google for GitHub
 
-1. **Over-Reliance on Metadata**  
-   - Search results depend heavily on repository names, languages, and descriptions.
-   - Repositories with vague or incomplete descriptions are often overlooked.
+## 📌 Introduction
 
-2. **Lack of Support for Synonyms & Acronyms**  
-   - Searching for *"JS tools"* vs. *"JavaScript tools"* can yield different results.
-   - This inconsistency makes searching frustrating and inefficient.
+GitFindr is an advanced search tool that enhances repository discovery by utilizing an improved **BM25-based ranking algorithm**. It integrates repository statistics like **⭐ stars, 🍴 forks, and 👀 clicks** to refine search results and provide more relevant rankings.
 
----
+## ⚙️ How It Works
 
-## ✅ Our Solution
-We are building an advanced search engine that enhances GitHub's search capabilities by:
+GitFindr is built mainly in **Golang** for speed and reliability.
 
-### 🏗 **Workflow Overview**
-Our system consists of two main components:
+### 🔍 Keyword Extraction
 
-1. **🌐 FastAPI Python Server**  
-   - Accepts repository links from users.  
-   - Downloads and extracts README.md content.  
-   - Processes README into a **list of words** for further analysis.
+1. **Processing Repository Links**: When a repository link is provided, the **Python backend (FastAPI)** processes it.
+2. **Extracting Meaningful Keywords**: Using **spaCy** 🧠 and **regex** ✍️, the backend extracts a list of relevant keywords from the repository description, README, and codebase.
 
-2. **🚀 Go Backend Engine**  
-   - Converts the processed words into a **list of indexed terms** for synonym matching.  
-   - Utilizes **Redis for caching** synonym lookups.  
-   - Incorporates GitHub statistics like **languages, stars, and forks** to enhance ranking.  
-   - Implements a **modified BM25 algorithm** for weighted frequency, considering additional repository metadata beyond just keywords.  
-   - Stores an **inverted index in SQLite** for efficient searching.
+### 📖 Indexing & Search Optimization
 
----
+1. **Creating Inverted Indexes**: The **Go backend** processes the extracted keywords and maintains two separate **inverted indexes** ([Wikipedia](https://en.wikipedia.org/wiki/Inverted_index)):
+   - **🔄 Synonym-based Indexing**: Allows for **vague** term matching.
+   - **✅ Exact Term Indexing**: Ensures precision in results.
+2. **Handling Synonyms**:
+   - A **synonym API** fetches related words (e.g., "hi" and "hello" share an index).
+   - Each word maps to an **index**, but since words can have **multiple meanings**, they may link to **multiple indexes**.
+   - To **avoid repeated calls**, once synonyms are fetched, the indexes are mapped to **Redis** as a cache.
+   - Initially, this caused **overly vague** search results.
+3. **Introducing Exact Term Matching**:
+   - A separate **exact term table** ignores synonyms, improving accuracy.
+   - **BM25 ranking** is computed for both tables, with **higher weight** assigned to exact matches.
+   - This hybrid approach ensures **optimal search precision** across various queries.
 
-## 📦 Building a Repository Database
-We collect repositories using three methods:
+## 📊 BM25 Calculation
 
-1. **🌐 Web Crawling**  
-   - Crawl developer websites for repository links.  
-   - Recursively follow discovered GitHub links to index repositories.
+GitFindr's ranking mechanism enhances **BM25** by incorporating weights and repository interaction metrics. Below is the **BM25S formula** used:
 
-2. **📝 Manual Submission**  
-   - Allow users to submit repositories directly to our search database.
+$${ BM25S(D, Q) = \sum_{i=1}^{|Q|} IDF(q_i) \cdot \frac{f(q_i, D) \cdot (K+1)}{f(q_i, D) + K \cdot (1 - b + b \cdot \frac{|D|}{avgD})} \cdot alt }$$
 
-3. **🔗 GitHub Search API**  
-   - Use the GitHub API to identify and add repositories.
-   - The API is rate-limited, but it provides a valuable starting point.
+Where:
 
----
+- **📖 Inverse Document Frequency (IDF):**
 
-## ⚙️ Preprocessing Repositories
-After collecting repositories, we process the data using the FastAPI Python server:
+  $${ IDF(q_i) = \log \left( \frac{N - df_i + 0.5}{df_i + 0.5} + 1 \right) }$$
 
-1. **📖 Normalization & Tokenization**  
-   - Extract text from README files.
-   - Convert content into a normalized list of words by stemming and removing stopwords.
+  - `N` = Total number of documents (repositories)
+  - `df_i` = Number of documents containing term `i`
 
-2. **🚫 Duplicate Detection**  
-   - Compute a **SHA-256 hash** of repository content to detect and prevent duplicate indexing.
+- **📈 Term Frequency Weighting:**
 
-3. **✅ Typo Correction**  
-   - Perform spell-checking and autocorrection for better search accuracy.
+  $${ f(q_i, D) = \sum_{b} v_b \cdot qd_i^b }$$
 
----
+  - `v_b` = Frequency weight of field `b`
+  - `qd_i^b` = Total occurrences of `q_i` in field `b` of document `D`
 
-## 🔄 Handling Synonyms & Acronyms with Redis
-To enhance search flexibility, we use Redis for synonym clustering:
+- **⚖️ Scaling Factor (`K`):**
 
-1. **🗂️ Synonym Clustering**  
-   - Map words like *"js"* and *"javascript"* to the same ID.
-   - If a word is missing, fetch synonyms via an external API.
+  $${ K = k_1 \cdot \frac{\text{avg term freq in dataset}}{\text{avg term freq in dataset after weighting}} }$$
 
-2. **⚡ Efficient Caching**  
-   - Cache API responses in Redis for quick lookups.
-   - Store queries as **SHA-256 hashed keys** to avoid redundant API calls.
+  - `k_1` is a tunable parameter (`k_1 ∈ [1.2, 2.0]`)
 
----
+- **📊 Additional Weighting (`alt`):**
 
-## 📊 Building the Inverted Index
-To enable fast and efficient searches, we construct an **inverted index**:
+  $${ alt = (1 + \sum_{i} \alpha_i \log (1 + x_i)) }$$
 
-- Stored in **SQLite** with three columns:
-  - **Word Index** → A unique identifier (e.g., Redis ID)
-  - **Frequency** → Number of times the word appears in a repository
-  - **Repositories** → A list of repositories containing the word
+  - `x_i` represents repository statistics (**⭐ stars, 🍴 forks, 👀 clicks**)
+  - `α_i` is a tuning constant
 
----
+## 🛠️ Installation & Usage
 
-## 📈 Search Ranking & Results
-Search results are ranked using a **modified BM25 algorithm** that considers:
+### 📂 Project Structure
 
-1. **🔎 Weighted Frequency**  
-   - Matches user queries with indexed words, adjusted for their significance.
+GitFindr consists of two main folders:
 
-2. **⭐ Repository Popularity**  
-   - Factors in GitHub stats like **stars, forks, and contributors** as ranking signals.
+- **Frontend**: The UI for searching repositories.
+- **Backend**: Handles indexing, searching, and processing.
 
-3. **📅 Recent Activity & Additional Metrics**  
-   - Prioritizes active repositories and relevant language usage.
+### 🚀 Frontend Setup
 
----
+1. Navigate to the frontend directory:
+   ```sh
+   cd frontend
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Start the frontend:
+   ```sh
+   npm run dev
+   ```
 
-## 🎯 Why This Matters
-By solving GitHub's search limitations, we provide developers with:
-✅ **More accurate results** – Even when descriptions are missing.  
-✅ **Support for synonyms & typos** – Making search more flexible.  
-✅ **Efficient ranking** – Prioritizing quality repositories.
+### 🔧 Backend Setup
 
----
+The backend consists of three folders:
 
-## 📌 Future Development
-- 🔄 Implementing **real-time updates** for repository changes.
-- 🔍 Adding **semantic search** for deeper understanding of queries.
-- 🌐 Providing **a web interface** for easy access.
+#### 1️⃣ `pyProcess` (Python API)
+- **Dockerized**, just run the backend container.
 
-🚀 **Stay tuned for updates!**
+#### 2️⃣ `indexer` (Go Indexer)
+- Navigate to the folder:
+  ```sh
+  cd backend/indexer
+  ```
+- Install dependencies and run:
+  ```sh
+  go get
+  go run main.go
+  ```
+
+#### 3️⃣ `redisCloner` (Redis Cache Loader)
+- Contains Python scripts to **preload Redis** with synonyms for faster setup.
+
+### ⚡ Redis Setup
+
+- Ensure **Redis** is installed.
+- Install **Redis CLI** ([Download here](https://redis.io/docs/getting-started/)).
+
+## 🤝 Contributing
+
+We welcome contributions! Please follow these steps:
+
+1. **Fork the repository**.
+2. **Create a feature branch** (`git checkout -b feature-branch`).
+3. **Commit changes** (`git commit -m 'Add new feature'`).
+4. **Push to your branch** (`git push origin feature-branch`).
+5. **Open a pull request**.
+
+## 🎯 Vision
+
+GitFindr envisions a community where people can discover and submit their ideas, ensuring that no idea gets buried and every project gets a fair chance to be seen. 🚀
