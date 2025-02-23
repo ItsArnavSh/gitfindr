@@ -127,5 +127,4 @@ We welcome contributions! Please follow these steps:
 
 ## 🎯 Vision
 
-GitFindr aims to **revolutionize repository search** by integrating **intelligent ranking metrics**, making repository discovery **seamless and efficient**. 🚀
-
+GitFindr envisions a community where people can discover and submit their ideas, ensuring that no idea gets buried and every project gets a fair chance to be seen. 🚀
