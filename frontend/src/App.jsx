@@ -4,11 +4,13 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import SearchResults from "./searchResults";
 import Search from "./search";
+import About from "./About";
 
 function App() {
   return (
     <>
       <Search />
+      <About />
     </>
   );
 }

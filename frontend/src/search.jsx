@@ -45,7 +45,8 @@ export default function Home() {
   }
 
   async function fetchRepoDetails(links) {
-    const apiKey = ""; //import.meta.env.GITHUB_API_KEY; // Use correct env handling
+    const apiKey = import.meta.env.GITHUB_API_KEY; // Use correct env handling
+    console.log(apiKey);
     console.log(apiKey);
     const details = await Promise.all(
       links.map(async (link) => {

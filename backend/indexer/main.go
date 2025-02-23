@@ -113,4 +113,5 @@ func main() {
 	app := setupServer()
 	log.Fatal(app.Listen(":3000"))
 	//fmt.Println(bm25("Chess in react"))
+	//index("https://github.com/ItsArnavSh/shatranj")
 }
