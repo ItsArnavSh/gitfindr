@@ -1,0 +1,10 @@
+2025-06-02T16:35:07.386194+0530 | ERROR | Error fetching README for ItsArnavSh/solunox: 404 Client Error: Not Found for url: https://api.github.com/repos/ItsArnavSh/solunox/readme
+2025-06-02T16:38:46.463452+0530 | ERROR | Error fetching README for ItsArnavSh/solunox: 404 Client Error: Not Found for url: https://raw.githubusercontent.com/ItsArnavSh/solunox/main/README.md
+2025-06-02T16:51:19.436611+0530 | ERROR | Error fetching README for ItsArnavSh/solunox: 404 Client Error: Not Found for url: https://raw.githubusercontent.com/ItsArnavSh/solunox/main/README.md
+2025-06-02T16:54:42.146483+0530 | ERROR | Error fetching README for ItsArnavSh/solunox: 404 Client Error: Not Found for url: https://raw.githubusercontent.com/ItsArnavSh/solunox/main/README.md
+2025-06-02T16:54:42.212956+0530 | INFO | Stored repository: ItsArnavSh/solunox
+2025-06-02T16:58:06.456048+0530 | INFO | Url for readme:https://raw.githubusercontent.com/ItsArnavSh/solunox/main/README.md
+2025-06-02T16:58:07.420561+0530 | ERROR | Error fetching README for ItsArnavSh/solunox: 404 Client Error: Not Found for url: https://raw.githubusercontent.com/ItsArnavSh/solunox/main/README.md
+2025-06-02T16:58:07.473057+0530 | INFO | Stored repository: ItsArnavSh/solunox
+2025-06-02T16:58:45.133030+0530 | INFO | Url for readme:https://raw.githubusercontent.com/ItsArnavSh/gitfindr/main/README.md
+2025-06-02T16:58:45.530325+0530 | INFO | Stored repository: ItsArnavSh/gitfindr

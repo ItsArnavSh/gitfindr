@@ -51,11 +51,10 @@ def load_link(url: str) -> dict | None:
         return None
 
 def fetch_readme(full_name: str) -> str | None:
-    url = f"https://api.github.com/repos/{full_name}/readme"
-    headers = {"Accept": "application/vnd.github.v3.raw"}
-
+    url = f"https://raw.githubusercontent.com/{full_name}/main/README.md"
+    logger.info(f"Url for readme:{url}")
     try:
-        response = requests.get(url, headers=headers)
+        response = requests.get(url)
         response.raise_for_status()
         return response.text
     except requests.exceptions.RequestException as e:

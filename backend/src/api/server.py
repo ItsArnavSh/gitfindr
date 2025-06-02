@@ -2,7 +2,7 @@ from src.internal.logger import logger
 from typing import Union
 from fastapi import FastAPI
 from src.entity.entity import RegisterRequest
-from src.storage.populate import store_link
+from src.service.storage.populate import store_link
 def StartServer(app:FastAPI):
     @app.post("/register")
     def register_repo(request: RegisterRequest):

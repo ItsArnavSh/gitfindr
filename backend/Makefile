@@ -1,4 +1,4 @@
 build:
 	uv sync
 run:
-    uv run uvicorn main:app --reload
+	uv run uvicorn main:app --reload
