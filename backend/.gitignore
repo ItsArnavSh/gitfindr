@@ -1,0 +1,6 @@
+gitfindr
+uv.lock
+.venv
+
+# Ignore dynaconf secret files
+.secrets.*

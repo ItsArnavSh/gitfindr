@@ -1,0 +1,8 @@
+[default]
+# Default environment settings (can be overridden)
+POSTGRES_USER = "user"
+POSTGRES_PASSWORD = "123"
+POSTGRES_DB = "vecdb"
+POSTGRES_HOST = "localhost"
+POSTGRES_PORT = 5432
+VECTOR_DIMENTIONS = 384
