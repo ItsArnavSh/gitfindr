@@ -1,0 +1,9 @@
+[project]
+name = "gitfindr"
+version = "0.1.0"
+description = "A hybrid search engine for GitHub and repo-based platforms using custom BM25 and README analysis."
+authors = [{ name = "Arnav", email = "its.arnav.sh@gmail.com" }]
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = ["dynaconf>=3.2.11"]
