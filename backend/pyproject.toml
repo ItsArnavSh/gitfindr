@@ -6,4 +6,9 @@ authors = [{ name = "Arnav", email = "its.arnav.sh@gmail.com" }]
 readme = "README.md"
 requires-python = ">=3.9"
 license = { text = "MIT" }
-dependencies = ["dynaconf>=3.2.11"]
+dependencies = [
+    "dynaconf>=3.2.11",
+    "pgvector>=0.4.1",
+    "requests>=2.32.3",
+    "sqlalchemy>=2.0.41",
+]
