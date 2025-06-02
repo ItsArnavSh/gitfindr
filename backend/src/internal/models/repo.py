@@ -1,6 +1,6 @@
 from sqlalchemy import Column, String, Integer, Boolean
 from sqlalchemy.dialects.postgresql import ARRAY
-from internal.base import Base  # Make sure the import path is correct
+from src.internal.base import Base  # Make sure the import path is correct
 
 class Repository(Base):
     __tablename__ = "repositories"

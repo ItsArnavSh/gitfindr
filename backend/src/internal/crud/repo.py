@@ -1,5 +1,5 @@
-from models.repo import Repository
-from internal.session import SessionLocal
+from src.internal.models.repo import Repository
+from src.internal.session import SessionLocal
 from dataclasses import asdict
 from typing import List
 def create_repository(repo_data: Repository):

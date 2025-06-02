@@ -8,8 +8,11 @@ requires-python = ">=3.9"
 license = { text = "MIT" }
 dependencies = [
     "dynaconf>=3.2.11",
+    "fastapi>=0.115.12",
     "pgvector>=0.4.1",
+    "psycopg2-binary>=2.9.10",
     "requests>=2.32.3",
     "sqlalchemy>=2.0.41",
     "uuid>=1.30",
+    "uvicorn>=0.34.3",
 ]

@@ -1,6 +1,6 @@
 gitfindr
 uv.lock
 .venv
-
+__pycache__
 # Ignore dynaconf secret files
 .secrets.*

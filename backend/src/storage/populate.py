@@ -1,7 +1,7 @@
-from internal.models.repo import Repository
-from internal.crud.repo import create_repository
+from src.internal.models.repo import Repository
+from src.internal.crud.repo import create_repository
 import requests
-from internal.logger import logger
+from src.internal.logger import logger
 import uuid
 
 def store_link(fullname: str):

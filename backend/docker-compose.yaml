@@ -1,7 +1,7 @@
 services:
   postgres:
     image: ankane/pgvector
-    container_name: pgvector-db
+    container_name: cool
     ports:
       - "5432:5432"
     environment:
