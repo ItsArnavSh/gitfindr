@@ -11,7 +11,7 @@ class Repository(Base):
     name = Column(String, nullable=False)
     fullname = Column(String, nullable=False)
     description = Column(String)
-    topics = Column(String)  # You might consider storing this as a JSON/ARRAY later
+    topics = Column(String)
     language = Column(String)
     stars = Column(Integer, default=0)
     forks = Column(Integer, default=0)

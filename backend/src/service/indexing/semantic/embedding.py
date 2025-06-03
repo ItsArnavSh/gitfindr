@@ -5,7 +5,7 @@ from src.internal.logger import logger
 from src.internal.models.embedding import Embedding
 from src.internal.models.repo import Repository
 from src.internal.session import SessionLocal
-class Embedder:
+class SemanticHandler:
     def __init__(self) -> None:
         logger.info("Initializing embedding pipeline...")
         self.model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
@@ -25,8 +25,10 @@ class Embedder:
         chunks = [doc.page_content for doc in docs]
         logger.debug(f"Created {len(chunks)} chunks")
         return chunks
-    def loadText(self,text:str,id:str):
+    def loadText(self,id:str,meta:str,text:str):
         chunks = self.chunker(text)
+        if meta!=None or meta!="":
+            chunks.append(meta)
         for chunk in chunks:
             upsert_vector( Embedding(id=id,vector= self.generate_embeddings(chunk)))
         logger.info("Chunks Upserted")
