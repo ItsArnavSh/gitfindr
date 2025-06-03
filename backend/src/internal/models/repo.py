@@ -1,11 +1,11 @@
 from sqlalchemy import Column, String, Integer, Boolean
 from sqlalchemy.dialects.postgresql import ARRAY
 from src.internal.base import Base  # Make sure the import path is correct
+from sqlalchemy.orm import Mapped, mapped_column
 
 class Repository(Base):
     __tablename__ = "repositories"
-
-    id = Column(String, primary_key=True, index=True)
+    id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
     url = Column(String, unique=True, nullable=False)
     readme_content = Column(String)
     name = Column(String, nullable=False)

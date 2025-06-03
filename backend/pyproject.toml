@@ -10,6 +10,7 @@ dependencies = [
     "dynaconf>=3.2.11",
     "fastapi>=0.115.12",
     "langchain>=0.3.25",
+    "loguru>=0.7.3",
     "pgvector>=0.4.1",
     "psycopg2-binary>=2.9.10",
     "requests>=2.32.3",

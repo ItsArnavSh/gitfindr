@@ -18,7 +18,6 @@ def store_link(fullname: str):
     topics_str = ",".join(topics) if isinstance(topics, list) else ""
 
     new_repo = Repository(
-        id=str(uuid.uuid4()),
         url=url,
         readme_content=readme_content,
         name=repo_data.get("name"),
