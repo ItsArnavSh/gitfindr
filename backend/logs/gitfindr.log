@@ -395,3 +395,1092 @@ Have fun contributing to PokeArcadia and learning about GitHub workflow! 🌟 If
 2025-06-04T15:28:49.206554+0530 | INFO | Query is
 2025-06-04T15:28:49.206693+0530 | INFO | keywords are: ['search', 'engine']
 2025-06-04T15:28:49.206788+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:35:30.794095+0530 | INFO | Url for readme:https://raw.githubusercontent.com/osdc/PokeArcadia/main/README.md
+2025-06-04T15:37:15.503027+0530 | INFO | Url for readme:https://raw.githubusercontent.com/godotengine/tps-demo/main/README.md
+2025-06-04T15:37:17.538443+0530 | ERROR | Error fetching README for godotengine/tps-demo: 404 Client Error: Not Found for url: https://raw.githubusercontent.com/godotengine/tps-demo/main/README.md
+2025-06-04T15:37:17.569415+0530 | INFO | None
+2025-06-04T15:37:17.570062+0530 | INFO | none
+2025-06-04T15:37:17.570178+0530 | INFO | Splitting article into chunks...
+2025-06-04T15:37:17.570464+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:37:17.620115+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:37:17.692339+0530 | INFO | Chunks Upserted
+2025-06-04T15:37:17.693478+0530 | INFO | Embeding done
+2025-06-04T15:37:17.806738+0530 | INFO | Inverted index Complete
+2025-06-04T15:37:30.157104+0530 | INFO | Url for readme:https://raw.githubusercontent.com/itchio/itch/main/README.md
+2025-06-04T15:37:30.554898+0530 | ERROR | Error fetching README for itchio/itch: 404 Client Error: Not Found for url: https://raw.githubusercontent.com/itchio/itch/main/README.md
+2025-06-04T15:37:30.565812+0530 | INFO | None
+2025-06-04T15:37:30.566463+0530 | INFO | none
+2025-06-04T15:37:30.566565+0530 | INFO | Splitting article into chunks...
+2025-06-04T15:37:30.566869+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:37:30.624992+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:37:31.139768+0530 | INFO | Chunks Upserted
+2025-06-04T15:37:31.140672+0530 | INFO | Embeding done
+2025-06-04T15:37:31.231840+0530 | INFO | Inverted index Complete
+2025-06-04T15:37:42.530522+0530 | INFO | Url for readme:https://raw.githubusercontent.com/ray-project/ray/main/README.md
+2025-06-04T15:37:43.313000+0530 | ERROR | Error fetching README for ray-project/ray: 404 Client Error: Not Found for url: https://raw.githubusercontent.com/ray-project/ray/main/README.md
+2025-06-04T15:37:43.324645+0530 | INFO | None
+2025-06-04T15:37:43.325355+0530 | INFO | none
+2025-06-04T15:37:43.325460+0530 | INFO | Splitting article into chunks...
+2025-06-04T15:37:43.325741+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:37:43.850661+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:37:44.595595+0530 | INFO | Chunks Upserted
+2025-06-04T15:37:44.596509+0530 | INFO | Embeding done
+2025-06-04T15:37:44.689708+0530 | INFO | Inverted index Complete
+2025-06-04T15:37:57.241561+0530 | INFO | Url for readme:https://raw.githubusercontent.com/facebook/react/main/README.md
+2025-06-04T15:37:58.052726+0530 | INFO | # [React](https://react.dev/) &middot; [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/facebook/react/blob/main/LICENSE) [![npm version](https://img.shields.io/npm/v/react.svg?style=flat)](https://www.npmjs.com/package/react) [![(Runtime) Build and Test](https://github.com/facebook/react/actions/workflows/runtime_build_and_test.yml/badge.svg)](https://github.com/facebook/react/actions/workflows/runtime_build_and_test.yml) [![(Compiler) TypeScript](https://github.com/facebook/react/actions/workflows/compiler_typescript.yml/badge.svg?branch=main)](https://github.com/facebook/react/actions/workflows/compiler_typescript.yml) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://legacy.reactjs.org/docs/how-to-contribute.html#your-first-pull-request)
+
+React is a JavaScript library for building user interfaces.
+
+* **Declarative:** React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes. Declarative views make your code more predictable, simpler to understand, and easier to debug.
+* **Component-Based:** Build encapsulated components that manage their own state, then compose them to make complex UIs. Since component logic is written in JavaScript instead of templates, you can easily pass rich data through your app and keep the state out of the DOM.
+* **Learn Once, Write Anywhere:** We don't make assumptions about the rest of your technology stack, so you can develop new features in React without rewriting existing code. React can also render on the server using [Node](https://nodejs.org/en) and power mobile apps using [React Native](https://reactnative.dev/).
+
+[Learn how to use React in your project](https://react.dev/learn).
+
+## Installation
+
+React has been designed for gradual adoption from the start, and **you can use as little or as much React as you need**:
+
+* Use [Quick Start](https://react.dev/learn) to get a taste of React.
+* [Add React to an Existing Project](https://react.dev/learn/add-react-to-an-existing-project) to use as little or as much React as you need.
+* [Create a New React App](https://react.dev/learn/start-a-new-react-project) if you're looking for a powerful JavaScript toolchain.
+
+## Documentation
+
+You can find the React documentation [on the website](https://react.dev/).
+
+Check out the [Getting Started](https://react.dev/learn) page for a quick overview.
+
+The documentation is divided into several sections:
+
+* [Quick Start](https://react.dev/learn)
+* [Tutorial](https://react.dev/learn/tutorial-tic-tac-toe)
+* [Thinking in React](https://react.dev/learn/thinking-in-react)
+* [Installation](https://react.dev/learn/installation)
+* [Describing the UI](https://react.dev/learn/describing-the-ui)
+* [Adding Interactivity](https://react.dev/learn/adding-interactivity)
+* [Managing State](https://react.dev/learn/managing-state)
+* [Advanced Guides](https://react.dev/learn/escape-hatches)
+* [API Reference](https://react.dev/reference/react)
+* [Where to Get Support](https://react.dev/community)
+* [Contributing Guide](https://legacy.reactjs.org/docs/how-to-contribute.html)
+
+You can improve it by sending pull requests to [this repository](https://github.com/reactjs/react.dev).
+
+## Examples
+
+We have several examples [on the website](https://react.dev/). Here is the first one to get you started:
+
+```jsx
+import { createRoot } from 'react-dom/client';
+
+function HelloMessage({ name }) {
+  return <div>Hello {name}</div>;
+}
+
+const root = createRoot(document.getElementById('container'));
+root.render(<HelloMessage name="Taylor" />);
+```
+
+This example will render "Hello Taylor" into a container on the page.
+
+You'll notice that we used an HTML-like syntax; [we call it JSX](https://react.dev/learn#writing-markup-with-jsx). JSX is not required to use React, but it makes code more readable, and writing it feels like writing HTML.
+
+## Contributing
+
+The main purpose of this repository is to continue evolving React core, making it faster and easier to use. Development of React happens in the open on GitHub, and we are grateful to the community for contributing bugfixes and improvements. Read below to learn how you can take part in improving React.
+
+### [Code of Conduct](https://code.fb.com/codeofconduct)
+
+Facebook has adopted a Code of Conduct that we expect project participants to adhere to. Please read [the full text](https://code.fb.com/codeofconduct) so that you can understand what actions will and will not be tolerated.
+
+### [Contributing Guide](https://legacy.reactjs.org/docs/how-to-contribute.html)
+
+Read our [contributing guide](https://legacy.reactjs.org/docs/how-to-contribute.html) to learn about our development process, how to propose bugfixes and improvements, and how to build and test your changes to React.
+
+### [Good First Issues](https://github.com/facebook/react/labels/good%20first%20issue)
+
+To help you get your feet wet and get you familiar with our contribution process, we have a list of [good first issues](https://github.com/facebook/react/labels/good%20first%20issue) that contain bugs that have a relatively limited scope. This is a great place to get started.
+
+### License
+
+React is [MIT licensed](./LICENSE).
+
+2025-06-04T15:37:58.055230+0530 | INFO | react middot github license npm version runtime build and test compiler typescript prs welcome react is a javascript library for building user interfaces declarative react makes it painless to create interactive uis design simple views for each state in your application and react will efficiently update and render just the right components when your data changes declarative views make your code more predictable simpler to understand and easier to debug componentbased build encapsulated components that manage their own state then compose them to make complex uis since component logic is written in javascript instead of templates you can easily pass rich data through your app and keep the state out of the dom learn once write anywhere we dont make assumptions about the rest of your technology stack so you can develop new features in react without rewriting existing code react can also render on the server using node and power mobile apps using react native learn how to use react in your project installation react has been designed for gradual adoption from the start and you can use as little or as much react as you need use quick start to get a taste of react add react to an existing project to use as little or as much react as you need create a new react app if youre looking for a powerful javascript toolchain documentation you can find the react documentation on the website check out the getting started page for a quick overview the documentation is divided into several sections quick start tutorial thinking in react installation describing the ui adding interactivity managing state advanced guides api reference where to get support contributing guide you can improve it by sending pull requests to this repository examples we have several examples on the website here is the first one to get you started this example will render hello taylor into a container on the page youll notice that we used an htmllike syntax we call it jsx jsx is not required to use react but it makes code more readable and writing it feels like writing html contributing the main purpose of this repository is to continue evolving react core making it faster and easier to use development of react happens in the open on github and we are grateful to the community for contributing bugfixes and improvements read below to learn how you can take part in improving react code of conduct facebook has adopted a code of conduct that we expect project participants to adhere to please read the full text so that you can understand what actions will and will not be tolerated contributing guide read our contributing guide to learn about our development process how to propose bugfixes and improvements and how to build and test your changes to react good first issues to help you get your feet wet and get you familiar with our contribution process we have a list of good first issues that contain bugs that have a relatively limited scope this is a great place to get started license react is mit licensedlicense
+2025-06-04T15:37:58.055427+0530 | INFO | Splitting article into chunks...
+2025-06-04T15:37:58.057372+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:37:58.120775+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:37:58.189770+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:37:58.296658+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:37:58.507234+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:37:58.627878+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:37:58.752118+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:37:59.333028+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:37:59.491363+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:37:59.606500+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:38:00.163752+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:38:00.725547+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:38:00.795035+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:38:00.899546+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:38:01.011173+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:38:01.184167+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:38:01.655918+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:38:01.725994+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:38:02.341443+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:38:02.437347+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:38:02.562758+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:38:03.127825+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:38:03.675821+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:38:03.821786+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:38:04.152700+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:38:04.756057+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:38:04.892406+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:38:05.061136+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:38:05.417547+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:38:05.534169+0530 | INFO | Chunks Upserted
+2025-06-04T15:38:05.535222+0530 | INFO | Embeding done
+2025-06-04T15:38:10.621881+0530 | INFO | Inverted index Complete
+2025-06-04T15:40:07.696882+0530 | INFO | A javascript framework
+2025-06-04T15:40:07.697232+0530 | INFO | A javascript framework
+2025-06-04T15:40:07.697689+0530 | INFO | a javascript framework
+2025-06-04T15:40:07.697836+0530 | INFO | Query is
+2025-06-04T15:40:07.698043+0530 | INFO | keywords are: ['javascript', 'framework']
+2025-06-04T15:40:07.698133+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:36.770021+0530 | INFO | Url for readme:https://raw.githubusercontent.com/huggingface/transformers/main/README.md
+2025-06-04T15:40:37.920716+0530 | INFO | <!---
+Copyright 2020 The HuggingFace Team. All rights reserved.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://huggingface.co/datasets/huggingface/documentation-images/raw/main/transformers-logo-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://huggingface.co/datasets/huggingface/documentation-images/raw/main/transformers-logo-light.svg">
+    <img alt="Hugging Face Transformers Library" src="https://huggingface.co/datasets/huggingface/documentation-images/raw/main/transformers-logo-light.svg" width="352" height="59" style="max-width: 100%;">
+  </picture>
+  <br/>
+  <br/>
+</p>
+
+<p align="center">
+    <a href="https://huggingface.com/models"><img alt="Checkpoints on Hub" src="https://img.shields.io/endpoint?url=https://huggingface.co/api/shields/models&color=brightgreen"></a>
+    <a href="https://circleci.com/gh/huggingface/transformers"><img alt="Build" src="https://img.shields.io/circleci/build/github/huggingface/transformers/main"></a>
+    <a href="https://github.com/huggingface/transformers/blob/main/LICENSE"><img alt="GitHub" src="https://img.shields.io/github/license/huggingface/transformers.svg?color=blue"></a>
+    <a href="https://huggingface.co/docs/transformers/index"><img alt="Documentation" src="https://img.shields.io/website/http/huggingface.co/docs/transformers/index.svg?down_color=red&down_message=offline&up_message=online"></a>
+    <a href="https://github.com/huggingface/transformers/releases"><img alt="GitHub release" src="https://img.shields.io/github/release/huggingface/transformers.svg"></a>
+    <a href="https://github.com/huggingface/transformers/blob/main/CODE_OF_CONDUCT.md"><img alt="Contributor Covenant" src="https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg"></a>
+    <a href="https://zenodo.org/badge/latestdoi/155220641"><img src="https://zenodo.org/badge/155220641.svg" alt="DOI"></a>
+</p>
+
+<h4 align="center">
+    <p>
+        <b>English</b> |
+        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_zh-hans.md">简体中文</a> |
+        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_zh-hant.md">繁體中文</a> |
+        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_ko.md">한국어</a> |
+        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_es.md">Español</a> |
+        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_ja.md">日本語</a> |
+        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_hd.md">हिन्दी</a> |
+        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_ru.md">Русский</a> |
+        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_pt-br.md">Рortuguês</a> |
+        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_te.md">తెలుగు</a> |
+        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_fr.md">Français</a> |
+        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_de.md">Deutsch</a> |
+        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_vi.md">Tiếng Việt</a> |
+        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_ar.md">العربية</a> |
+        <a href="https://github.com/huggingface/transformers/blob/main/i18n/README_ur.md">اردو</a> |
+    </p>
+</h4>
+
+<h3 align="center">
+    <p>State-of-the-art pretrained models for inference and training</p>
+</h3>
+
+<h3 align="center">
+    <a href="https://hf.co/course"><img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/course_banner.png"></a>
+</h3>
+
+Transformers is a library of pretrained text, computer vision, audio, video, and multimodal models for inference and training. Use Transformers to fine-tune models on your data, build inference applications, and for generative AI use cases across multiple modalities.
+
+There are over 500K+ Transformers [model checkpoints](https://huggingface.co/models?library=transformers&sort=trending) on the [Hugging Face Hub](https://huggingface.com/models) you can use.
+
+Explore the [Hub](https://huggingface.com/) today to find a model and use Transformers to help you get started right away.
+
+## Installation
+
+Transformers works with Python 3.9+ [PyTorch](https://pytorch.org/get-started/locally/) 2.1+, [TensorFlow](https://www.tensorflow.org/install/pip) 2.6+, and [Flax](https://flax.readthedocs.io/en/latest/) 0.4.1+.
+
+Create and activate a virtual environment with [venv](https://docs.python.org/3/library/venv.html) or [uv](https://docs.astral.sh/uv/), a fast Rust-based Python package and project manager.
+
+```py
+# venv
+python -m venv .my-env
+source .my-env/bin/activate
+# uv
+uv venv .my-env
+source .my-env/bin/activate
+```
+
+Install Transformers in your virtual environment.
+
+```py
+# pip
+pip install "transformers[torch]"
+
+# uv
+uv pip install "transformers[torch]"
+```
+
+Install Transformers from source if you want the latest changes in the library or are interested in contributing. However, the *latest* version may not be stable. Feel free to open an [issue](https://github.com/huggingface/transformers/issues) if you encounter an error.
+
+```shell
+git clone https://github.com/huggingface/transformers.git
+cd transformers
+
+# pip
+pip install .[torch]
+
+# uv
+uv pip install .[torch]
+```
+
+## Quickstart
+
+Get started with Transformers right away with the [Pipeline](https://huggingface.co/docs/transformers/pipeline_tutorial) API. The `Pipeline` is a high-level inference class that supports text, audio, vision, and multimodal tasks. It handles preprocessing the input and returns the appropriate output.
+
+Instantiate a pipeline and specify model to use for text generation. The model is downloaded and cached so you can easily reuse it again. Finally, pass some text to prompt the model.
+
+```py
+from transformers import pipeline
+
+pipeline = pipeline(task="text-generation", model="Qwen/Qwen2.5-1.5B")
+pipeline("the secret to baking a really good cake is ")
+[{'generated_text': 'the secret to baking a really good cake is 1) to use the right ingredients and 2) to follow the recipe exactly. the recipe for the cake is as follows: 1 cup of sugar, 1 cup of flour, 1 cup of milk, 1 cup of butter, 1 cup of eggs, 1 cup of chocolate chips. if you want to make 2 cakes, how much sugar do you need? To make 2 cakes, you will need 2 cups of sugar.'}]
+```
+
+To chat with a model, the usage pattern is the same. The only difference is you need to construct a chat history (the input to `Pipeline`) between you and the system.
+
+> [!TIP]
+> You can also chat with a model directly from the command line.
+> ```shell
+> transformers chat Qwen/Qwen2.5-0.5B-Instruct
+> ```
+
+```py
+import torch
+from transformers import pipeline
+
+chat = [
+    {"role": "system", "content": "You are a sassy, wise-cracking robot as imagined by Hollywood circa 1986."},
+    {"role": "user", "content": "Hey, can you tell me any fun things to do in New York?"}
+]
+
+pipeline = pipeline(task="text-generation", model="meta-llama/Meta-Llama-3-8B-Instruct", torch_dtype=torch.bfloat16, device_map="auto")
+response = pipeline(chat, max_new_tokens=512)
+print(response[0]["generated_text"][-1]["content"])
+```
+
+Expand the examples below to see how `Pipeline` works for different modalities and tasks.
+
+<details>
+<summary>Automatic speech recognition</summary>
+
+```py
+from transformers import pipeline
+
+pipeline = pipeline(task="automatic-speech-recognition", model="openai/whisper-large-v3")
+pipeline("https://huggingface.co/datasets/Narsil/asr_dummy/resolve/main/mlk.flac")
+{'text': ' I have a dream that one day this nation will rise up and live out the true meaning of its creed.'}
+```
+
+</details>
+
+<details>
+<summary>Image classification</summary>
+
+<h3 align="center">
+    <a><img src="https://huggingface.co/datasets/Narsil/image_dummy/raw/main/parrots.png"></a>
+</h3>
+
+```py
+from transformers import pipeline
+
+pipeline = pipeline(task="image-classification", model="facebook/dinov2-small-imagenet1k-1-layer")
+pipeline("https://huggingface.co/datasets/Narsil/image_dummy/raw/main/parrots.png")
+[{'label': 'macaw', 'score': 0.997848391532898},
+ {'label': 'sulphur-crested cockatoo, Kakatoe galerita, Cacatua galerita',
+  'score': 0.0016551691805943847},
+ {'label': 'lorikeet', 'score': 0.00018523589824326336},
+ {'label': 'African grey, African gray, Psittacus erithacus',
+  'score': 7.85409429227002e-05},
+ {'label': 'quail', 'score': 5.502637941390276e-05}]
+```
+
+</details>
+
+<details>
+<summary>Visual question answering</summary>
+
+
+<h3 align="center">
+    <a><img src="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/idefics-few-shot.jpg"></a>
+</h3>
+
+```py
+from transformers import pipeline
+
+pipeline = pipeline(task="visual-question-answering", model="Salesforce/blip-vqa-base")
+pipeline(
+    image="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/idefics-few-shot.jpg",
+    question="What is in the image?",
+)
+[{'answer': 'statue of liberty'}]
+```
+
+</details>
+
+## Why should I use Transformers?
+
+1. Easy-to-use state-of-the-art models:
+    - High performance on natural language understanding & generation, computer vision, audio, video, and multimodal tasks.
+    - Low barrier to entry for researchers, engineers, and developers.
+    - Few user-facing abstractions with just three classes to learn.
+    - A unified API for using all our pretrained models.
+
+1. Lower compute costs, smaller carbon footprint:
+    - Share trained models instead of training from scratch.
+    - Reduce compute time and production costs.
+    - Dozens of model architectures with 1M+ pretrained checkpoints across all modalities.
+
+1. Choose the right framework for every part of a models lifetime:
+    - Train state-of-the-art models in 3 lines of code.
+    - Move a single model between PyTorch/JAX/TF2.0 frameworks at will.
+    - Pick the right framework for training, evaluation, and production.
+
+1. Easily customize a model or an example to your needs:
+    - We provide examples for each architecture to reproduce the results published by its original authors.
+    - Model internals are exposed as consistently as possible.
+    - Model files can be used independently of the library for quick experiments.
+
+<a target="_blank" href="https://huggingface.co/enterprise">
+    <img alt="Hugging Face Enterprise Hub" src="https://github.com/user-attachments/assets/247fb16d-d251-4583-96c4-d3d76dda4925">
+</a><br>
+
+## Why shouldn't I use Transformers?
+
+- This library is not a modular toolbox of building blocks for neural nets. The code in the model files is not refactored with additional abstractions on purpose, so that researchers can quickly iterate on each of the models without diving into additional abstractions/files.
+- The training API is optimized to work with PyTorch models provided by Transformers. For generic machine learning loops, you should use another library like [Accelerate](https://huggingface.co/docs/accelerate).
+- The [example scripts]((https://github.com/huggingface/transformers/tree/main/examples)) are only *examples*. They may not necessarily work out-of-the-box on your specific use case and you'll need to adapt the code for it to work.
+
+## 100 projects using Transformers
+
+Transformers is more than a toolkit to use pretrained models, it's a community of projects built around it and the
+Hugging Face Hub. We want Transformers to enable developers, researchers, students, professors, engineers, and anyone
+else to build their dream projects.
+
+In order to celebrate Transformers 100,000 stars, we wanted to put the spotlight on the
+community with the [awesome-transformers](./awesome-transformers.md) page which lists 100
+incredible projects built with Transformers.
+
+If you own or use a project that you believe should be part of the list, please open a PR to add it!
+
+## Example models
+
+You can test most of our models directly on their [Hub model pages](https://huggingface.co/models).
+
+Expand each modality below to see a few example models for various use cases.
+
+<details>
+<summary>Audio</summary>
+
+- Audio classification with [Whisper](https://huggingface.co/openai/whisper-large-v3-turbo)
+- Automatic speech recognition with [Moonshine](https://huggingface.co/UsefulSensors/moonshine)
+- Keyword spotting with [Wav2Vec2](https://huggingface.co/superb/wav2vec2-base-superb-ks)
+- Speech to speech generation with [Moshi](https://huggingface.co/kyutai/moshiko-pytorch-bf16)
+- Text to audio with [MusicGen](https://huggingface.co/facebook/musicgen-large)
+- Text to speech with [Bark](https://huggingface.co/suno/bark)
+
+</details>
+
+<details>
+<summary>Computer vision</summary>
+
+- Automatic mask generation with [SAM](https://huggingface.co/facebook/sam-vit-base)
+- Depth estimation with [DepthPro](https://huggingface.co/apple/DepthPro-hf)
+- Image classification with [DINO v2](https://huggingface.co/facebook/dinov2-base)
+- Keypoint detection with [SuperGlue](https://huggingface.co/magic-leap-community/superglue_outdoor)
+- Keypoint matching with [SuperGlue](https://huggingface.co/magic-leap-community/superglue)
+- Object detection with [RT-DETRv2](https://huggingface.co/PekingU/rtdetr_v2_r50vd)
+- Pose Estimation with [VitPose](https://huggingface.co/usyd-community/vitpose-base-simple)
+- Universal segmentation with [OneFormer](https://huggingface.co/shi-labs/oneformer_ade20k_swin_large)
+- Video classification with [VideoMAE](https://huggingface.co/MCG-NJU/videomae-large)
+
+</details>
+
+<details>
+<summary>Multimodal</summary>
+
+- Audio or text to text with [Qwen2-Audio](https://huggingface.co/Qwen/Qwen2-Audio-7B)
+- Document question answering with [LayoutLMv3](https://huggingface.co/microsoft/layoutlmv3-base)
+- Image or text to text with [Qwen-VL](https://huggingface.co/Qwen/Qwen2.5-VL-3B-Instruct)
+- Image captioning [BLIP-2](https://huggingface.co/Salesforce/blip2-opt-2.7b)
+- OCR-based document understanding with [GOT-OCR2](https://huggingface.co/stepfun-ai/GOT-OCR-2.0-hf)
+- Table question answering with [TAPAS](https://huggingface.co/google/tapas-base)
+- Unified multimodal understanding and generation with [Emu3](https://huggingface.co/BAAI/Emu3-Gen)
+- Vision to text with [Llava-OneVision](https://huggingface.co/llava-hf/llava-onevision-qwen2-0.5b-ov-hf)
+- Visual question answering with [Llava](https://huggingface.co/llava-hf/llava-1.5-7b-hf)
+- Visual referring expression segmentation with [Kosmos-2](https://huggingface.co/microsoft/kosmos-2-patch14-224)
+
+</details>
+
+<details>
+<summary>NLP</summary>
+
+- Masked word completion with [ModernBERT](https://huggingface.co/answerdotai/ModernBERT-base)
+- Named entity recognition with [Gemma](https://huggingface.co/google/gemma-2-2b)
+- Question answering with [Mixtral](https://huggingface.co/mistralai/Mixtral-8x7B-v0.1)
+- Summarization with [BART](https://huggingface.co/facebook/bart-large-cnn)
+- Translation with [T5](https://huggingface.co/google-t5/t5-base)
+- Text generation with [Llama](https://huggingface.co/meta-llama/Llama-3.2-1B)
+- Text classification with [Qwen](https://huggingface.co/Qwen/Qwen2.5-0.5B)
+
+</details>
+
+## Citation
+
+We now have a [paper](https://www.aclweb.org/anthology/2020.emnlp-demos.6/) you can cite for the 🤗 Transformers library:
+```bibtex
+@inproceedings{wolf-etal-2020-transformers,
+    title = "Transformers: State-of-the-Art Natural Language Processing",
+    author = "Thomas Wolf and Lysandre Debut and Victor Sanh and Julien Chaumond and Clement Delangue and Anthony Moi and Pierric Cistac and Tim Rault and Rémi Louf and Morgan Funtowicz and Joe Davison and Sam Shleifer and Patrick von Platen and Clara Ma and Yacine Jernite and Julien Plu and Canwen Xu and Teven Le Scao and Sylvain Gugger and Mariama Drame and Quentin Lhoest and Alexander M. Rush",
+    booktitle = "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing: System Demonstrations",
+    month = oct,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/2020.emnlp-demos.6",
+    pages = "38--45"
+}
+```
+
+2025-06-04T15:40:37.926667+0530 | INFO | english stateoftheart pretrained models for inference and training transformers is a library of pretrained text computer vision audio video and multimodal models for inference and training use transformers to finetune models on your data build inference applications and for generative ai use cases across multiple modalities there are over 500k transformers model checkpoints on the hugging face hub you can use explore the hub today to find a model and use transformers to help you get started right away installation transformers works with python 39 pytorch 21 tensorflow 26 and flax 041 create and activate a virtual environment with venv or uv a fast rustbased python package and project manager install transformers in your virtual environment install transformers from source if you want the latest changes in the library or are interested in contributing however the latest version may not be stable feel free to open an issue if you encounter an error quickstart get started with transformers right away with the pipeline api the pipeline is a highlevel inference class that supports text audio vision and multimodal tasks it handles preprocessing the input and returns the appropriate output instantiate a pipeline and specify model to use for text generation the model is downloaded and cached so you can easily reuse it again finally pass some text to prompt the model to chat with a model the usage pattern is the same the only difference is you need to construct a chat history the input to pipeline between you and the system tip you can also chat with a model directly from the command line expand the examples below to see how pipeline works for different modalities and tasks automatic speech recognition image classification visual question answering why should i use transformers 1 easytouse stateoftheart models high performance on natural language understanding generation computer vision audio video and multimodal tasks low barrier to entry for researchers engineers and developers few userfacing abstractions with just three classes to learn a unified api for using all our pretrained models 1 lower compute costs smaller carbon footprint share trained models instead of training from scratch reduce compute time and production costs dozens of model architectures with 1m pretrained checkpoints across all modalities 1 choose the right framework for every part of a models lifetime train stateoftheart models in 3 lines of code move a single model between pytorchjaxtf20 frameworks at will pick the right framework for training evaluation and production 1 easily customize a model or an example to your needs we provide examples for each architecture to reproduce the results published by its original authors model internals are exposed as consistently as possible model files can be used independently of the library for quick experiments why shouldnt i use transformers this library is not a modular toolbox of building blocks for neural nets the code in the model files is not refactored with additional abstractions on purpose so that researchers can quickly iterate on each of the models without diving into additional abstractionsfiles the training api is optimized to work with pytorch models provided by transformers for generic machine learning loops you should use another library like accelerate the example scripts are only examples they may not necessarily work outofthebox on your specific use case and youll need to adapt the code for it to work 100 projects using transformers transformers is more than a toolkit to use pretrained models its a community of projects built around it and the hugging face hub we want transformers to enable developers researchers students professors engineers and anyone else to build their dream projects in order to celebrate transformers 100000 stars we wanted to put the spotlight on the community with the awesometransformersawesometransformersmd page which lists 100 incredible projects built with transformers if you own or use a project that you believe should be part of the list please open a pr to add it example models you can test most of our models directly on their hub model pages expand each modality below to see a few example models for various use cases audio audio classification with whisper automatic speech recognition with moonshine keyword spotting with wav2vec2 speech to speech generation with moshi text to audio with musicgen text to speech with bark computer vision automatic mask generation with sam depth estimation with depthpro image classification with dino v2 keypoint detection with superglue keypoint matching with superglue object detection with rtdetrv2 pose estimation with vitpose universal segmentation with oneformer video classification with videomae multimodal audio or text to text with qwen2audio document question answering with layoutlmv3 image or text to text with qwenvl image captioning blip2 ocrbased document understanding with gotocr2 table question answering with tapas unified multimodal understanding and generation with emu3 vision to text with llavaonevision visual question answering with llava visual referring expression segmentation with kosmos2 nlp masked word completion with modernbert named entity recognition with gemma question answering with mixtral summarization with bart translation with t5 text generation with llama text classification with qwen citation we now have a paper you can cite for the transformers library
+2025-06-04T15:40:37.926908+0530 | INFO | Splitting article into chunks...
+2025-06-04T15:40:37.928617+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:38.001348+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:38.163296+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:38.277071+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:38.667330+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:39.122801+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:39.539991+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:39.738644+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:39.848530+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:39.950336+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:40.042784+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:40.654716+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:40.783700+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:40.890026+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:41.011885+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:41.123084+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:41.655463+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:41.753492+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:41.832975+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:41.917403+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:42.493444+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:42.572452+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:42.658367+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:43.022247+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:43.108543+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:43.187732+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:43.269534+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:43.367050+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:43.462441+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:43.564867+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:43.687795+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:43.775692+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:44.339163+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:44.484021+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:44.663633+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:44.750607+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:44.849186+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:44.964610+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:45.071129+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:45.644765+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:45.725724+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:45.862591+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:45.954972+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:46.242693+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:46.315439+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:46.397606+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:46.495801+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:46.603476+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:46.687371+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:46.774796+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:47.342293+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:47.882882+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T15:40:47.970898+0530 | INFO | Chunks Upserted
+2025-06-04T15:40:47.971950+0530 | INFO | Embeding done
+2025-06-04T15:40:55.869991+0530 | INFO | Inverted index Complete
+2025-06-04T16:35:10.261734+0530 | INFO | ml
+2025-06-04T16:35:10.261940+0530 | INFO | ml
+2025-06-04T16:35:10.262328+0530 | INFO | ml
+2025-06-04T16:35:10.262427+0530 | INFO | Query is
+2025-06-04T16:35:10.262512+0530 | INFO | keywords are: ['ml']
+2025-06-04T16:35:10.262591+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T16:35:21.820487+0530 | INFO | machine learning
+2025-06-04T16:35:21.820665+0530 | INFO | machine learning
+2025-06-04T16:35:21.820962+0530 | INFO | machine learning
+2025-06-04T16:35:21.821038+0530 | INFO | Query is
+2025-06-04T16:35:21.821084+0530 | INFO | keywords are: ['machine', 'learning']
+2025-06-04T16:35:21.821123+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T16:35:42.925412+0530 | INFO | UI Framework
+2025-06-04T16:35:42.925582+0530 | INFO | UI Framework
+2025-06-04T16:35:42.925797+0530 | INFO | ui framework
+2025-06-04T16:35:42.925855+0530 | INFO | Query is
+2025-06-04T16:35:42.925897+0530 | INFO | keywords are: ['ui', 'framework']
+2025-06-04T16:35:42.925931+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T16:56:23.089557+0530 | INFO | Url for readme:https://raw.githubusercontent.com/sveltejs/svelte/main/README.md
+2025-06-04T16:56:23.488054+0530 | INFO | <a href="https://svelte.dev">
+	<picture>
+		<source media="(prefers-color-scheme: dark)" srcset="assets/banner_dark.png">
+		<img src="assets/banner.png" alt="Svelte - web development for the rest of us" />
+	</picture>
+</a>
+
+[![License](https://img.shields.io/npm/l/svelte.svg)](LICENSE.md) [![Chat](https://img.shields.io/discord/457912077277855764?label=chat&logo=discord)](https://svelte.dev/chat)
+
+## What is Svelte?
+
+Svelte is a new way to build web applications. It's a compiler that takes your declarative components and converts them into efficient JavaScript that surgically updates the DOM.
+
+Learn more at the [Svelte website](https://svelte.dev), or stop by the [Discord chatroom](https://svelte.dev/chat).
+
+## Supporting Svelte
+
+Svelte is an MIT-licensed open source project with its ongoing development made possible entirely by fantastic volunteers. If you'd like to support their efforts, please consider:
+
+- [Becoming a backer on Open Collective](https://opencollective.com/svelte).
+
+Funds donated via Open Collective will be used for compensating expenses related to Svelte's development such as hosting costs. If sufficient donations are received, funds may also be used to support Svelte's development more directly.
+
+## Roadmap
+
+You may view [our roadmap](https://svelte.dev/roadmap) if you'd like to see what we're currently working on.
+
+## Contributing
+
+Please see the [Contributing Guide](CONTRIBUTING.md) and the [`svelte`](packages/svelte) package for information on contributing to Svelte.
+
+## Is svelte.dev down?
+
+Probably not, but it's possible. If you can't seem to access any `.dev` sites, check out [this SuperUser question and answer](https://superuser.com/q/1413402).
+
+## License
+
+[MIT](LICENSE.md)
+
+2025-06-04T16:56:23.489334+0530 | INFO | license chat what is svelte svelte is a new way to build web applications its a compiler that takes your declarative components and converts them into efficient javascript that surgically updates the dom learn more at the svelte website or stop by the discord chatroom supporting svelte svelte is an mitlicensed open source project with its ongoing development made possible entirely by fantastic volunteers if youd like to support their efforts please consider becoming a backer on open collective funds donated via open collective will be used for compensating expenses related to sveltes development such as hosting costs if sufficient donations are received funds may also be used to support sveltes development more directly roadmap you may view our roadmap if youd like to see what were currently working on contributing please see the contributing guidecontributingmd and the sveltepackagessvelte package for information on contributing to svelte is sveltedev down probably not but its possible if you cant seem to access any dev sites check out this superuser question and answer license mitlicensemd
+2025-06-04T16:56:23.489477+0530 | INFO | Splitting article into chunks...
+2025-06-04T16:56:23.490052+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T16:56:23.527342+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T16:56:23.551290+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T16:56:23.567912+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T16:56:23.587370+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T16:56:23.609008+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T16:56:23.635710+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T16:56:23.659166+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T16:56:23.691218+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T16:56:23.753225+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T16:56:23.803803+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T16:56:23.826493+0530 | INFO | Chunks Upserted
+2025-06-04T16:56:23.826684+0530 | INFO | Embeding done
+2025-06-04T16:56:25.054486+0530 | INFO | Inverted index Complete
+2025-06-04T16:56:47.002285+0530 | INFO | compiled js framework
+2025-06-04T16:56:47.002523+0530 | INFO | compiled js framework
+2025-06-04T16:56:47.002761+0530 | INFO | compiled js framework
+2025-06-04T16:56:47.002833+0530 | INFO | Query is
+2025-06-04T16:56:47.002881+0530 | INFO | keywords are: ['compiled', 'js', 'framework']
+2025-06-04T16:56:47.002923+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T16:56:58.737821+0530 | INFO | compiled javascript framework
+2025-06-04T16:56:58.738087+0530 | INFO | compiled javascript framework
+2025-06-04T16:56:58.738624+0530 | INFO | compiled javascript framework
+2025-06-04T16:56:58.738782+0530 | INFO | Query is
+2025-06-04T16:56:58.738884+0530 | INFO | keywords are: ['compiled', 'javascript', 'framework']
+2025-06-04T16:56:58.738970+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T16:58:07.493626+0530 | INFO | TS game
+2025-06-04T16:58:07.493770+0530 | INFO | TS game
+2025-06-04T16:58:07.493917+0530 | INFO | ts game
+2025-06-04T16:58:07.493954+0530 | INFO | Query is
+2025-06-04T16:58:07.493993+0530 | INFO | keywords are: ['ts', 'game']
+2025-06-04T16:58:07.494020+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T17:50:30.194667+0530 | INFO | Initializing embedding pipeline...
+2025-06-04T17:50:46.774668+0530 | INFO | Initializing embedding pipeline...
+2025-06-04T17:51:16.830951+0530 | INFO | Initializing embedding pipeline...
+2025-06-04T17:51:42.822228+0530 | INFO | Initializing embedding pipeline...
+2025-06-04T17:55:08.386179+0530 | INFO | Initializing embedding pipeline...
+2025-06-04T17:55:23.808197+0530 | INFO | Code
+2025-06-04T17:55:23.808396+0530 | INFO | Code
+2025-06-04T17:55:23.808814+0530 | INFO | code
+2025-06-04T17:55:23.810399+0530 | INFO | Query is
+2025-06-04T17:55:23.810525+0530 | INFO | keywords are: ['code']
+2025-06-04T17:55:23.810610+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T17:58:56.524372+0530 | INFO | Initializing embedding pipeline...
+2025-06-04T18:00:05.608636+0530 | INFO | Code
+2025-06-04T18:00:05.608819+0530 | INFO | Code
+2025-06-04T18:00:05.609214+0530 | INFO | code
+2025-06-04T18:00:05.610648+0530 | INFO | Query is
+2025-06-04T18:00:05.610770+0530 | INFO | keywords are: ['code']
+2025-06-04T18:00:05.610834+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T18:00:19.456054+0530 | INFO | Search Engine
+2025-06-04T18:00:19.456196+0530 | INFO | Search Engine
+2025-06-04T18:00:19.456361+0530 | INFO | search engine
+2025-06-04T18:00:19.456402+0530 | INFO | Query is
+2025-06-04T18:00:19.456432+0530 | INFO | keywords are: ['search', 'engine']
+2025-06-04T18:00:19.456462+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T18:09:54.051001+0530 | INFO | Initializing embedding pipeline...
+2025-06-04T18:10:20.851248+0530 | INFO | core
+2025-06-04T18:10:20.851427+0530 | INFO | core
+2025-06-04T18:10:20.851781+0530 | INFO | core
+2025-06-04T18:10:20.853024+0530 | INFO | Query is
+2025-06-04T18:10:20.853109+0530 | INFO | keywords are: ['core']
+2025-06-04T18:10:20.853176+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T18:15:37.705024+0530 | INFO | Code
+2025-06-04T18:15:37.705335+0530 | INFO | Code
+2025-06-04T18:15:37.706465+0530 | INFO | code
+2025-06-04T18:15:37.706729+0530 | INFO | Query is
+2025-06-04T18:15:37.706873+0530 | INFO | keywords are: ['code']
+2025-06-04T18:15:37.707001+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T18:18:19.869132+0530 | INFO | Cda
+2025-06-04T18:18:19.869457+0530 | INFO | Cda
+2025-06-04T18:18:19.871559+0530 | INFO | cda
+2025-06-04T18:18:19.871780+0530 | INFO | Query is
+2025-06-04T18:18:19.871944+0530 | INFO | keywords are: ['cda']
+2025-06-04T18:18:19.872091+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T18:18:23.916118+0530 | INFO | Pokemon
+2025-06-04T18:18:23.916370+0530 | INFO | Pokemon
+2025-06-04T18:18:23.916681+0530 | INFO | pokemon
+2025-06-04T18:18:23.916758+0530 | INFO | Query is
+2025-06-04T18:18:23.916817+0530 | INFO | keywords are: ['pokemon']
+2025-06-04T18:18:23.916874+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T18:19:41.956888+0530 | INFO | Pokemon
+2025-06-04T18:19:41.957090+0530 | INFO | Pokemon
+2025-06-04T18:19:41.957444+0530 | INFO | pokemon
+2025-06-04T18:19:41.957530+0530 | INFO | Query is
+2025-06-04T18:19:41.957606+0530 | INFO | keywords are: ['pokemon']
+2025-06-04T18:19:41.957674+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T18:21:56.184688+0530 | INFO | Pokemon
+2025-06-04T18:21:56.184924+0530 | INFO | Pokemon
+2025-06-04T18:21:56.185300+0530 | INFO | pokemon
+2025-06-04T18:21:56.185410+0530 | INFO | Query is
+2025-06-04T18:21:56.185487+0530 | INFO | keywords are: ['pokemon']
+2025-06-04T18:21:56.185558+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T18:24:04.482104+0530 | INFO | Cool
+2025-06-04T18:24:04.482299+0530 | INFO | Cool
+2025-06-04T18:24:04.482731+0530 | INFO | cool
+2025-06-04T18:24:04.482836+0530 | INFO | Query is
+2025-06-04T18:24:04.482914+0530 | INFO | keywords are: ['cool']
+2025-06-04T18:24:04.482985+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T18:24:09.185338+0530 | INFO | Pokemon
+2025-06-04T18:24:09.185528+0530 | INFO | Pokemon
+2025-06-04T18:24:09.185872+0530 | INFO | pokemon
+2025-06-04T18:24:09.185956+0530 | INFO | Query is
+2025-06-04T18:24:09.186029+0530 | INFO | keywords are: ['pokemon']
+2025-06-04T18:24:09.186097+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T18:25:50.808541+0530 | INFO | pokemon
+2025-06-04T18:25:50.808701+0530 | INFO | pokemon
+2025-06-04T18:25:50.808877+0530 | INFO | pokemon
+2025-06-04T18:25:50.808920+0530 | INFO | Query is
+2025-06-04T18:25:50.808956+0530 | INFO | keywords are: ['pokemon']
+2025-06-04T18:25:50.808988+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T18:26:02.333145+0530 | INFO | Pokemon
+2025-06-04T18:26:02.333303+0530 | INFO | Pokemon
+2025-06-04T18:26:02.333654+0530 | INFO | pokemon
+2025-06-04T18:26:02.333727+0530 | INFO | Query is
+2025-06-04T18:26:02.333761+0530 | INFO | keywords are: ['pokemon']
+2025-06-04T18:26:02.333787+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T18:26:33.405548+0530 | INFO | Pokemon
+2025-06-04T18:26:33.405731+0530 | INFO | Pokemon
+2025-06-04T18:26:33.406056+0530 | INFO | pokemon
+2025-06-04T18:26:33.406145+0530 | INFO | Query is
+2025-06-04T18:26:33.406227+0530 | INFO | keywords are: ['pokemon']
+2025-06-04T18:26:33.406302+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T18:26:48.070725+0530 | INFO | Pokemon
+2025-06-04T18:26:48.070915+0530 | INFO | Pokemon
+2025-06-04T18:26:48.071206+0530 | INFO | pokemon
+2025-06-04T18:26:48.071278+0530 | INFO | Query is
+2025-06-04T18:26:48.071348+0530 | INFO | keywords are: ['pokemon']
+2025-06-04T18:26:48.071411+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T18:27:13.567095+0530 | INFO | pokemon
+2025-06-04T18:27:13.567525+0530 | INFO | pokemon
+2025-06-04T18:27:13.568406+0530 | INFO | pokemon
+2025-06-04T18:27:13.568616+0530 | INFO | Query is
+2025-06-04T18:27:13.568804+0530 | INFO | keywords are: ['pokemon']
+2025-06-04T18:27:13.568979+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T18:27:22.953739+0530 | INFO | code
+2025-06-04T18:27:22.954050+0530 | INFO | code
+2025-06-04T18:27:22.954455+0530 | INFO | code
+2025-06-04T18:27:22.954550+0530 | INFO | Query is
+2025-06-04T18:27:22.954627+0530 | INFO | keywords are: ['code']
+2025-06-04T18:27:22.954696+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T18:29:04.732162+0530 | INFO | code
+2025-06-04T18:29:04.732362+0530 | INFO | code
+2025-06-04T18:29:04.732804+0530 | INFO | code
+2025-06-04T18:29:04.732871+0530 | INFO | Query is
+2025-06-04T18:29:04.732907+0530 | INFO | keywords are: ['code']
+2025-06-04T18:29:04.732936+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T18:29:04.969865+0530 | INFO | code
+2025-06-04T18:29:04.970012+0530 | INFO | code
+2025-06-04T18:29:04.970171+0530 | INFO | code
+2025-06-04T18:29:04.970210+0530 | INFO | Query is
+2025-06-04T18:29:04.970242+0530 | INFO | keywords are: ['code']
+2025-06-04T18:29:04.970272+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T18:41:15.272970+0530 | INFO | TS game
+2025-06-04T18:41:15.273132+0530 | INFO | TS game
+2025-06-04T18:41:15.273298+0530 | INFO | ts game
+2025-06-04T18:41:15.273347+0530 | INFO | Query is
+2025-06-04T18:41:15.273381+0530 | INFO | keywords are: ['ts', 'game']
+2025-06-04T18:41:15.273412+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T18:41:47.326745+0530 | INFO | Pokemon
+2025-06-04T18:41:47.327429+0530 | INFO | Pokemon
+2025-06-04T18:41:47.329058+0530 | INFO | pokemon
+2025-06-04T18:41:47.329146+0530 | INFO | Query is
+2025-06-04T18:41:47.329223+0530 | INFO | keywords are: ['pokemon']
+2025-06-04T18:41:47.329294+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T18:41:50.984872+0530 | INFO | Pokemon
+2025-06-04T18:41:50.985062+0530 | INFO | Pokemon
+2025-06-04T18:41:50.985407+0530 | INFO | pokemon
+2025-06-04T18:41:50.985489+0530 | INFO | Query is
+2025-06-04T18:41:50.985563+0530 | INFO | keywords are: ['pokemon']
+2025-06-04T18:41:50.985631+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T18:42:17.397379+0530 | INFO | Pokemon
+2025-06-04T18:42:17.397560+0530 | INFO | Pokemon
+2025-06-04T18:42:17.398037+0530 | INFO | pokemon
+2025-06-04T18:42:17.398124+0530 | INFO | Query is
+2025-06-04T18:42:17.398165+0530 | INFO | keywords are: ['pokemon']
+2025-06-04T18:42:17.398200+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T18:43:04.418266+0530 | INFO | search
+2025-06-04T18:43:04.418468+0530 | INFO | search
+2025-06-04T18:43:04.418885+0530 | INFO | search
+2025-06-04T18:43:04.418958+0530 | INFO | Query is
+2025-06-04T18:43:04.418998+0530 | INFO | keywords are: ['search']
+2025-06-04T18:43:04.419034+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T18:43:15.762251+0530 | INFO | pokemon
+2025-06-04T18:43:15.762624+0530 | INFO | pokemon
+2025-06-04T18:43:15.764871+0530 | INFO | pokemon
+2025-06-04T18:43:15.765086+0530 | INFO | Query is
+2025-06-04T18:43:15.765212+0530 | INFO | keywords are: ['pokemon']
+2025-06-04T18:43:15.765330+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T18:43:49.572628+0530 | INFO | pokemon
+2025-06-04T18:43:49.572775+0530 | INFO | pokemon
+2025-06-04T18:43:49.572936+0530 | INFO | pokemon
+2025-06-04T18:43:49.572976+0530 | INFO | Query is
+2025-06-04T18:43:49.573010+0530 | INFO | keywords are: ['pokemon']
+2025-06-04T18:43:49.573042+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T18:47:30.517532+0530 | INFO | pokemon
+2025-06-04T18:47:30.517853+0530 | INFO | pokemon
+2025-06-04T18:47:30.518253+0530 | INFO | pokemon
+2025-06-04T18:47:30.518359+0530 | INFO | Query is
+2025-06-04T18:47:30.518434+0530 | INFO | keywords are: ['pokemon']
+2025-06-04T18:47:30.518504+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T18:50:12.347470+0530 | INFO | Code
+2025-06-04T18:50:12.347644+0530 | INFO | Code
+2025-06-04T18:50:12.348014+0530 | INFO | code
+2025-06-04T18:50:12.348105+0530 | INFO | Query is
+2025-06-04T18:50:12.348148+0530 | INFO | keywords are: ['code']
+2025-06-04T18:50:12.348182+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T18:53:27.399222+0530 | INFO | Code
+2025-06-04T18:53:27.399404+0530 | INFO | Code
+2025-06-04T18:53:27.399633+0530 | INFO | code
+2025-06-04T18:53:27.399694+0530 | INFO | Query is
+2025-06-04T18:53:27.399742+0530 | INFO | keywords are: ['code']
+2025-06-04T18:53:27.399786+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T18:54:09.650379+0530 | INFO | pokemon
+2025-06-04T18:54:09.650539+0530 | INFO | pokemon
+2025-06-04T18:54:09.650707+0530 | INFO | pokemon
+2025-06-04T18:54:09.650747+0530 | INFO | Query is
+2025-06-04T18:54:09.650782+0530 | INFO | keywords are: ['pokemon']
+2025-06-04T18:54:09.650812+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T18:54:34.742214+0530 | INFO | Code
+2025-06-04T18:54:34.742391+0530 | INFO | Code
+2025-06-04T18:54:34.742613+0530 | INFO | code
+2025-06-04T18:54:34.742661+0530 | INFO | Query is
+2025-06-04T18:54:34.742708+0530 | INFO | keywords are: ['code']
+2025-06-04T18:54:34.742752+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T18:55:15.491788+0530 | INFO | Code
+2025-06-04T18:55:15.492043+0530 | INFO | Code
+2025-06-04T18:55:15.492366+0530 | INFO | code
+2025-06-04T18:55:15.492466+0530 | INFO | Query is
+2025-06-04T18:55:15.492532+0530 | INFO | keywords are: ['code']
+2025-06-04T18:55:15.492588+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T18:55:30.206874+0530 | INFO | Code
+2025-06-04T18:55:30.207047+0530 | INFO | Code
+2025-06-04T18:55:30.207447+0530 | INFO | code
+2025-06-04T18:55:30.207542+0530 | INFO | Query is
+2025-06-04T18:55:30.207630+0530 | INFO | keywords are: ['code']
+2025-06-04T18:55:30.207696+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T18:55:45.417670+0530 | INFO | Code
+2025-06-04T18:55:45.417850+0530 | INFO | Code
+2025-06-04T18:55:45.418166+0530 | INFO | code
+2025-06-04T18:55:45.418250+0530 | INFO | Query is
+2025-06-04T18:55:45.418338+0530 | INFO | keywords are: ['code']
+2025-06-04T18:55:45.418409+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T18:56:03.065927+0530 | INFO | Code
+2025-06-04T18:56:03.066204+0530 | INFO | Code
+2025-06-04T18:56:03.066772+0530 | INFO | code
+2025-06-04T18:56:03.066867+0530 | INFO | Query is
+2025-06-04T18:56:03.066944+0530 | INFO | keywords are: ['code']
+2025-06-04T18:56:03.067025+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T18:56:42.772560+0530 | INFO | Code
+2025-06-04T18:56:42.772749+0530 | INFO | Code
+2025-06-04T18:56:42.773122+0530 | INFO | code
+2025-06-04T18:56:42.773244+0530 | INFO | Query is
+2025-06-04T18:56:42.773291+0530 | INFO | keywords are: ['code']
+2025-06-04T18:56:42.773335+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T18:56:52.721268+0530 | INFO | Code
+2025-06-04T18:56:52.721463+0530 | INFO | Code
+2025-06-04T18:56:52.721792+0530 | INFO | code
+2025-06-04T18:56:52.721874+0530 | INFO | Query is
+2025-06-04T18:56:52.721948+0530 | INFO | keywords are: ['code']
+2025-06-04T18:56:52.722016+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T19:04:41.076628+0530 | INFO | Code
+2025-06-04T19:04:41.076757+0530 | INFO | Code
+2025-06-04T19:04:41.076977+0530 | INFO | code
+2025-06-04T19:04:41.077039+0530 | INFO | Query is
+2025-06-04T19:04:41.077088+0530 | INFO | keywords are: ['code']
+2025-06-04T19:04:41.077132+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T19:07:17.170901+0530 | INFO | Code
+2025-06-04T19:07:17.171056+0530 | INFO | Code
+2025-06-04T19:07:17.171215+0530 | INFO | code
+2025-06-04T19:07:17.171269+0530 | INFO | Query is
+2025-06-04T19:07:17.171317+0530 | INFO | keywords are: ['code']
+2025-06-04T19:07:17.171351+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T19:07:23.656350+0530 | INFO | Pokemon
+2025-06-04T19:07:23.656640+0530 | INFO | Pokemon
+2025-06-04T19:07:23.657081+0530 | INFO | pokemon
+2025-06-04T19:07:23.657183+0530 | INFO | Query is
+2025-06-04T19:07:23.657269+0530 | INFO | keywords are: ['pokemon']
+2025-06-04T19:07:23.657365+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T19:10:15.208167+0530 | INFO | Url for readme:https://raw.githubusercontent.com/ItsArnavSh/BashBrain/main/README.md
+2025-06-04T19:10:15.853460+0530 | INFO | # BashBrain 🤖💻
+
+**BashBrain** is a terminal command executor written in Go, powered by **Gemini** (a generative AI model). The tool allows you to execute terminal commands using natural language prompts and get automated results. It makes interacting with the terminal more intuitive by leveraging the Gemini API, offering a seamless experience to perform common tasks with ease.
+
+## Features 🌟
+
+- **Natural Language Command Execution**: Use natural language prompts to execute terminal commands. 📝➡️💻
+- **Powered by Gemini API**: Currently uses the Gemini API to generate command responses. ⚡
+- **Customizable & Extensible**: Easily add new commands or modify existing ones for your use case. 🔧
+- **Environment Configuration**: Requires a Gemini API key, which must be set in the `.env` file to function. 🔑
+
+## Prerequisites 🛠️
+
+To use this project, ensure that you have the following installed:
+
+- **Go (1.18 or newer)**: To run and build the project. 🏗️
+- **Gemini API Key**: You must have an API key from Gemini to make requests. 🔑
+
+## Setup 🏁
+
+Follow these steps to set up and use **BashBrain**:
+
+### 1. Clone the Repository 📥
+
+Clone the project to your local machine using the following command:
+
+```bash
+git clone git@github.com:ItsArnavSh/BashBrain.git
+cd BashBrain
+```
+
+### 2. Set Up the `.env` File 📝
+
+In the root directory of the project, create a `.env` file to store your Gemini API key.
+
+```bash
+touch .env
+```
+
+Inside the `.env` file, add the following line:
+
+```bash
+GEMINI_KEY=your_gemini_api_key_here
+```
+
+Replace `your_gemini_api_key_here` with your actual Gemini API key. 🔑
+
+### 3. Install Dependencies 📦
+
+Install the necessary Go dependencies using the following command:
+
+```bash
+go get
+```
+
+### 4. Run the Project 🚀
+
+Run the project by executing the following command:
+
+```bash
+go run .
+```
+
+Once the server is running, you can start interacting with the terminal through the Gemini-powered API. 💬
+
+### 5. Usage 🔍
+
+The Gemini model will process the request, generate the appropriate command or response, and display the result in the terminal. 🤖
+
+### Example Command 🧑‍💻:
+
+```bash
+go run .
+```
+
+Prompt:
+
+```
+Create a directory named "Test" and list its contents
+```
+
+Response:
+
+```
+Command executed: mkdir Test && ls Test
+Result: Directory created and contents listed.
+```
+
+## API Details 🔧
+
+**BashBrain** interacts with the Gemini API using a simple REST API request to generate content. The project currently uses **Gemini** to handle command execution in the terminal. 🌐
+
+
+## Contributing 🤝
+
+Feel free to open issues or submit pull requests to contribute to **BashBrain**. Contributions are welcome, and we appreciate any improvements or new features that enhance the project! 🌱
+
+### Steps to Contribute:
+
+1. Fork the repository. 🍴
+2. Create a new branch for your feature or fix. 🌿
+3. Make your changes and test them thoroughly. 🧪
+4. Submit a pull request with a description of the changes. 📤
+
+2025-06-04T19:10:15.854950+0530 | INFO | bashbrain bashbrain is a terminal command executor written in go powered by gemini a generative ai model the tool allows you to execute terminal commands using natural language prompts and get automated results it makes interacting with the terminal more intuitive by leveraging the gemini api offering a seamless experience to perform common tasks with ease features natural language command execution use natural language prompts to execute terminal commands powered by gemini api currently uses the gemini api to generate command responses customizable extensible easily add new commands or modify existing ones for your use case environment configuration requires a gemini api key which must be set in the env file to function prerequisites to use this project ensure that you have the following installed go 118 or newer to run and build the project gemini api key you must have an api key from gemini to make requests setup follow these steps to set up and use bashbrain 1 clone the repository clone the project to your local machine using the following command 2 set up the env file in the root directory of the project create a env file to store your gemini api key inside the env file add the following line replace yourgeminiapikeyhere with your actual gemini api key 3 install dependencies install the necessary go dependencies using the following command 4 run the project run the project by executing the following command once the server is running you can start interacting with the terminal through the geminipowered api 5 usage the gemini model will process the request generate the appropriate command or response and display the result in the terminal example command prompt response api details bashbrain interacts with the gemini api using a simple rest api request to generate content the project currently uses gemini to handle command execution in the terminal contributing feel free to open issues or submit pull requests to contribute to bashbrain contributions are welcome and we appreciate any improvements or new features that enhance the project steps to contribute 1 fork the repository 2 create a new branch for your feature or fix 3 make your changes and test them thoroughly 4 submit a pull request with a description of the changes
+2025-06-04T19:10:15.855062+0530 | INFO | Splitting article into chunks...
+2025-06-04T19:10:15.856034+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T19:10:15.891557+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T19:10:15.913097+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T19:10:15.927607+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T19:10:15.945348+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T19:10:16.407216+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T19:10:16.627808+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T19:10:16.648449+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T19:10:16.671159+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T19:10:16.691535+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T19:10:16.709021+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T19:10:16.726789+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T19:10:16.744670+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T19:10:16.762083+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T19:10:16.781128+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T19:10:16.799691+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T19:10:16.820050+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T19:10:16.842187+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T19:10:16.863273+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T19:10:16.883840+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T19:10:16.916360+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T19:10:16.936414+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T19:10:16.952658+0530 | INFO | Chunks Upserted
+2025-06-04T19:10:16.952827+0530 | INFO | Embeding done
+2025-06-04T19:10:18.581087+0530 | INFO | Inverted index Complete
+2025-06-04T19:10:37.247150+0530 | INFO | AI
+2025-06-04T19:10:37.247312+0530 | INFO | AI
+2025-06-04T19:10:37.247538+0530 | INFO | ai
+2025-06-04T19:10:37.247586+0530 | INFO | Query is
+2025-06-04T19:10:37.247639+0530 | INFO | keywords are: ['ai']
+2025-06-04T19:10:37.247674+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T19:10:51.678578+0530 | INFO | AI
+2025-06-04T19:10:51.678786+0530 | INFO | AI
+2025-06-04T19:10:51.679190+0530 | INFO | ai
+2025-06-04T19:10:51.679263+0530 | INFO | Query is
+2025-06-04T19:10:51.679305+0530 | INFO | keywords are: ['ai']
+2025-06-04T19:10:51.679347+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T19:13:21.662694+0530 | INFO | Repo
+2025-06-04T19:13:21.662903+0530 | INFO | Repo
+2025-06-04T19:13:21.663349+0530 | INFO | repo
+2025-06-04T19:13:21.663452+0530 | INFO | Query is
+2025-06-04T19:13:21.663501+0530 | INFO | keywords are: ['repo']
+2025-06-04T19:13:21.663537+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T19:13:26.930163+0530 | INFO | Search
+2025-06-04T19:13:26.930409+0530 | INFO | Search
+2025-06-04T19:13:26.932100+0530 | INFO | search
+2025-06-04T19:13:26.932215+0530 | INFO | Query is
+2025-06-04T19:13:26.932309+0530 | INFO | keywords are: ['search']
+2025-06-04T19:13:26.932403+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T19:13:37.637003+0530 | INFO | Artificial Intelligence
+2025-06-04T19:13:37.637146+0530 | INFO | Artificial Intelligence
+2025-06-04T19:13:37.637304+0530 | INFO | artificial intelligence
+2025-06-04T19:13:37.637390+0530 | INFO | Query is
+2025-06-04T19:13:37.637426+0530 | INFO | keywords are: ['artificial', 'intelligence']
+2025-06-04T19:13:37.637453+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T19:13:48.376238+0530 | INFO | Pokemon
+2025-06-04T19:13:48.376437+0530 | INFO | Pokemon
+2025-06-04T19:13:48.376649+0530 | INFO | pokemon
+2025-06-04T19:13:48.376701+0530 | INFO | Query is
+2025-06-04T19:13:48.376768+0530 | INFO | keywords are: ['pokemon']
+2025-06-04T19:13:48.376839+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T19:14:56.943301+0530 | INFO | Url for readme:https://raw.githubusercontent.com/smogon/pokemon-showdown/main/README.md
+2025-06-04T19:14:58.128861+0530 | ERROR | Error fetching README for smogon/pokemon-showdown: 404 Client Error: Not Found for url: https://raw.githubusercontent.com/smogon/pokemon-showdown/main/README.md
+2025-06-04T19:14:58.137318+0530 | INFO | None
+2025-06-04T19:14:58.137612+0530 | INFO | none
+2025-06-04T19:14:58.137663+0530 | INFO | Splitting article into chunks...
+2025-06-04T19:14:58.137825+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T19:14:58.170035+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T19:14:58.191822+0530 | INFO | Chunks Upserted
+2025-06-04T19:14:58.191972+0530 | INFO | Embeding done
+2025-06-04T19:14:58.217901+0530 | INFO | Inverted index Complete
+2025-06-04T19:15:01.685612+0530 | INFO | Pokemon
+2025-06-04T19:15:01.685831+0530 | INFO | Pokemon
+2025-06-04T19:15:01.686105+0530 | INFO | pokemon
+2025-06-04T19:15:01.686184+0530 | INFO | Query is
+2025-06-04T19:15:01.686242+0530 | INFO | keywords are: ['pokemon']
+2025-06-04T19:15:01.686310+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T19:15:13.963917+0530 | INFO | Pokemon battle
+2025-06-04T19:15:13.964098+0530 | INFO | Pokemon battle
+2025-06-04T19:15:13.964423+0530 | INFO | pokemon battle
+2025-06-04T19:15:13.964512+0530 | INFO | Query is
+2025-06-04T19:15:13.964584+0530 | INFO | keywords are: ['pokemon', 'battle']
+2025-06-04T19:15:13.964648+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T19:15:19.885815+0530 | INFO | battle
+2025-06-04T19:15:19.885994+0530 | INFO | battle
+2025-06-04T19:15:19.886348+0530 | INFO | battle
+2025-06-04T19:15:19.886451+0530 | INFO | Query is
+2025-06-04T19:15:19.886495+0530 | INFO | keywords are: ['battle']
+2025-06-04T19:15:19.886528+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T19:15:50.635179+0530 | INFO | web api for pokemon battle
+2025-06-04T19:15:50.635343+0530 | INFO | web api for pokemon battle
+2025-06-04T19:15:50.635534+0530 | INFO | web api for pokemon battle
+2025-06-04T19:15:50.635604+0530 | INFO | Query is
+2025-06-04T19:15:50.635730+0530 | INFO | keywords are: ['web', 'api', 'pokemon', 'battle']
+2025-06-04T19:15:50.635797+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T19:16:00.692798+0530 | INFO | web api
+2025-06-04T19:16:00.692984+0530 | INFO | web api
+2025-06-04T19:16:00.693324+0530 | INFO | web api
+2025-06-04T19:16:00.693419+0530 | INFO | Query is
+2025-06-04T19:16:00.693492+0530 | INFO | keywords are: ['web', 'api']
+2025-06-04T19:16:00.693558+0530 | INFO | Generating embeddings for chunk...
+2025-06-04T19:16:08.052177+0530 | INFO | pokemon
+2025-06-04T19:16:08.052329+0530 | INFO | pokemon
+2025-06-04T19:16:08.052500+0530 | INFO | pokemon
+2025-06-04T19:16:08.052540+0530 | INFO | Query is
+2025-06-04T19:16:08.052576+0530 | INFO | keywords are: ['pokemon']
+2025-06-04T19:16:08.052609+0530 | INFO | Generating embeddings for chunk...

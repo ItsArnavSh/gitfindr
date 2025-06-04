@@ -21,7 +21,7 @@ export default function Home() {
   async function searchQuery() {
     try {
       console.log("Searching for:", query);
-      const response = await fetch("http://localhost:3000/search", {
+      const response = await fetch("http://localhost:8000/query", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -34,49 +34,18 @@ export default function Home() {
       }
 
       const data = await response.json();
-      console.log("Search Results:", data.results);
-      setResults(data.results);
-      fetchRepoDetails(data.results);
+      setRepoDetails(data);
+      setTimeout(() => {
+        document
+          .getElementById("repos")
+          ?.scrollIntoView({ behavior: "smooth" });
+      }, 200);
     } catch (error) {
       console.error("Error:", error);
       setResults([]);
       setRepoDetails([]);
     }
   }
-
-  async function fetchRepoDetails(links) {
-    const apiKey = ""; //import.meta.env.GITHUB_API_KEY; // Use correct env handling
-    console.log(apiKey);
-    const details = await Promise.all(
-      links.map(async (link) => {
-        try {
-          const repoPath = link.replace("https://github.com/", "");
-          const response = await fetch(
-            `https://api.github.com/repos/${repoPath}`,
-            {
-              headers: {
-                Authorization: `Bearer ${apiKey}`, // Use Bearer instead of token
-                Accept: "application/vnd.github.v3+json",
-              },
-            },
-          );
-
-          if (!response.ok)
-            throw new Error(`GitHub API error: ${response.status}`);
-          return await response.json();
-        } catch (error) {
-          console.error("Error fetching repo details:", error);
-          return null;
-        }
-      }),
-    );
-
-    setRepoDetails(details.filter(Boolean));
-    setTimeout(() => {
-      document.getElementById("repos")?.scrollIntoView({ behavior: "smooth" });
-    }, 200);
-  }
-
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
@@ -190,7 +159,13 @@ export default function Home() {
           <p className="ibm-plex-sans m-4 text-lg text-gray-600">
             Finished A Project?
           </p>
-          <button className="ibm-plex-sans rounded-xl bg-black px-6 py-2 text-white text-xl transition-transform hover:scale-105">
+
+          {showModal && <RegisterModal onClose={() => setShowModal(false)} />}
+          <button
+            to="/register"
+            onClick={() => setShowModal(true)}
+            className="ibm-plex-sans rounded-xl bg-black px-6 py-2 text-white text-xl transition-transform hover:scale-105"
+          >
             Register Your Repo
           </button>
         </motion.div>
@@ -209,7 +184,7 @@ export default function Home() {
               className="p-6 border border-gray-200 rounded-2xl shadow-xl bg-white hover:shadow-2xl transition-all"
             >
               <a
-                href={repo.html_url}
+                href={repo.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-xl font-bold text-blue-600 hover:underline"
@@ -219,10 +194,10 @@ export default function Home() {
               <p className="mt-2 text-gray-700">
                 {repo.description || "No description available."}
               </p>
-              <p className="mt-2 text-gray-500">👤 {repo.owner?.login}</p>
+              <p className="mt-2 text-gray-500">👤 {repo.fullname}</p>
               <div className="flex items-center justify-between mt-3 text-gray-600">
-                <span>⭐ {repo.stargazers_count}</span>
-                <span>🍴 {repo.forks_count}</span>
+                <span>⭐ {repo.stars}</span>
+                <span>🍴 {repo.forks}</span>
               </div>
             </motion.div>
           ))}

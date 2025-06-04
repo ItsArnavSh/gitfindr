@@ -12,21 +12,17 @@ export default function RegisterModal({ onClose }) {
     setMessage("");
 
     try {
-      const response = await fetch("http://localhost:3000/index", {
+      const response = await fetch("http://localhost:8000/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ repo_url: repoUrl }),
+        body: JSON.stringify({ fullname: repoUrl }),
       });
 
       const data = await response.json();
 
-      if (data.message === "completed") {
-        setMessage("Indexing complete! ✅");
-      } else {
-        setMessage("Something went wrong. ❌");
-      }
+      setMessage("Indexing complete! ✅");
     } catch (error) {
       setMessage("Failed to connect to the server. ❌");
     } finally {
@@ -37,7 +33,7 @@ export default function RegisterModal({ onClose }) {
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
       <div className="bg-white p-5 rounded-lg shadow-lg w-80">
-        <h2 className="text-lg font-semibold">Paste GitHub Link</h2>
+        <h2 className="text-lg font-semibold">Write repo fullname</h2>
         <input
           type="text"
           placeholder="https://github.com/user/repo"
