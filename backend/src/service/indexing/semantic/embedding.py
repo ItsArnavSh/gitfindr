@@ -25,7 +25,7 @@ class SemanticHandler:
         chunks = [doc.page_content for doc in docs]
         logger.debug(f"Created {len(chunks)} chunks")
         return chunks
-    def loadText(self,id:str,meta:str,text:str):
+    def loadText(self,id:int,meta:str,text:str):
         chunks = self.chunker(text)
         if meta!=None or meta!="":
             chunks.append(meta)

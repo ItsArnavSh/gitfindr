@@ -4,19 +4,21 @@ import requests
 from src.internal.logger import logger
 import uuid
 
-def store_link(fullname: str):
+def store_link(fullname: str)->Repository:
     url = f"https://api.github.com/repos/{fullname}"
     repo_data = load_link(url)
     readme_content = fetch_readme(fullname)
 
     if repo_data is None:
         logger.error(f"Repo Data is None for {url}")
-        return
+        return Repository()
 
     # Handle topics: some repos may not have them
     topics = repo_data.get("topics", [])
     topics_str = ",".join(topics) if isinstance(topics, list) else ""
-
+    size = 0
+    if readme_content:
+        size = len(readme_content)
     new_repo = Repository(
         url=url,
         readme_content=readme_content,
@@ -31,11 +33,11 @@ def store_link(fullname: str):
         watchers=repo_data.get("subscribers_count", 0),
         archived=repo_data.get("archived", False),
         forked=repo_data.get("fork", False),
+        size=size
     )
 
     # Persist to database
-    create_repository(new_repo)
-    logger.info(f"Stored repository: {fullname}")
+    return create_repository(new_repo)
 
 def load_link(url: str) -> dict | None:
     try:

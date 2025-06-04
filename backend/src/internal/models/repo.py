@@ -19,3 +19,4 @@ class Repository(Base):
     watchers = Column(Integer, default=0)
     archived = Column(Boolean, default=False)
     forked = Column(Boolean, default=False)
+    size :Mapped[int] = mapped_column()

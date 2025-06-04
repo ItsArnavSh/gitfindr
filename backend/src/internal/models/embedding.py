@@ -1,8 +1,9 @@
-from sqlalchemy import Column, String
+from sqlalchemy import Column, String,Integer
 from pgvector.sqlalchemy import Vector
-from internal.base import Base
+from src.internal.base import Base
 from config import settings
 class Embedding(Base):
     __tablename__ = "embeddings"
-    id = Column(String)
+    prim_id = Column(Integer, primary_key=True, autoincrement=True)
+    id = Column(Integer)
     vector = Column(Vector(settings.VECTOR_DIMENSIONS))

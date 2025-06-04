@@ -2,14 +2,15 @@ from src.internal.models.repo import Repository
 from src.internal.session import SessionLocal
 from dataclasses import asdict
 from typing import List
-def create_repository(repo_data: Repository):
+from sqlalchemy.sql import func
+def create_repository(repo_data: Repository)->Repository:
     db = SessionLocal()
     db.add(repo_data)
     db.commit()
     db.refresh(repo_data)
     db.close()
-    return
-def get_repository_by_id(repo_id: str)->Repository|None:
+    return repo_data
+def get_repository_by_id(repo_id: int)->Repository|None:
     db = SessionLocal()
     repo = db.query(Repository).filter(Repository.id == repo_id).first()
     db.close()
@@ -21,5 +22,26 @@ def list_repos()->List[Repository]:
     try:
         repos = db.query(Repository).all()
         return repos
+    finally:
+        db.close()
+def repository_count() -> int:
+    db = SessionLocal()
+    try:
+        count = db.query(Repository).count()
+        return count
+    finally:
+        db.close()
+def avg_doc_size() -> float:
+    db = SessionLocal()
+    try:
+        average = db.query(func.avg(Repository.size)).scalar()
+        return float(average or 0.0)
+    finally:
+        db.close()
+def doc_size(doc_id:int)->int:
+    db = SessionLocal()
+    try:
+        doc = db.query(Repository).filter(Repository.id==doc_id).first()
+        return doc.size  if doc is not None else 0
     finally:
         db.close()
