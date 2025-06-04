@@ -1,4 +1,5 @@
 
+from src.internal.logger import logger
 from src.internal.crud.embedding import get_top_k_chunk_ids
 from src.internal.crud.invertedindex import insert_word, word_dfi, word_freqlist
 from src.internal.crud.repo import avg_doc_size, doc_size, get_repository_by_id, repository_count
@@ -13,18 +14,24 @@ class QueryEngine:
         self.sh = semanticHandler
         self.db = dbHandler
     def query(self,query:str)->List[Repository]:
+        logger.info(query)
         query = clean_text(query)#For Semantic
         keywords = keyword_extraction(query)#For BM25
-
+        logger.info("Query is",clean_text)
+        logger.info(f"keywords are: {keywords}")
         limit = 20
         embedding = self.sh.generate_embeddings(query)
         semanticRankings = get_top_k_chunk_ids(embedding,limit)
         keywordRankings = self.bm25(keywords)
+        logger.debug(f"Semantic: {semanticRankings} and Keyword: {keywordRankings}")
         final_rankings =  self.rrf_merge([semanticRankings,keywordRankings])
+        logger.debug(f"Final: {final_rankings}")
         repos:List[Repository] = []
         for repo_id in final_rankings:
             repo = get_repository_by_id(repo_id)
+
             if repo!=None:
+                logger.debug(f"Repo: {repo.fullname}")
                 repos.append(repo)
         return repos
     def bm25(self,keywords:List[str])->List[int]:

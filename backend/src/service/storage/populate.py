@@ -18,7 +18,7 @@ def store_link(fullname: str)->Repository:
     topics_str = ",".join(topics) if isinstance(topics, list) else ""
     size = 0
     if readme_content:
-        size = len(readme_content)
+        size = len(readme_content.split())
     new_repo = Repository(
         url=url,
         readme_content=readme_content,

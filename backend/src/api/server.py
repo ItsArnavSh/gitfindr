@@ -19,6 +19,5 @@ def StartServer(app:FastAPI):
         return {"message": f"Repository {fullname} registered successfully"}
     @app.get("/query")
     def query(request: QueryRequest):
-        repo_list = qengine.query(QueryRequest.query)
-        for repo in repo_list:
-            print(repo.fullname)
+        repo_list = qengine.query(request.query)
+        return [{"fullname": repo.fullname, "url": repo.url} for repo in repo_list]
