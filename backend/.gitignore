@@ -5,3 +5,4 @@ logs
 __pycache__
 # Ignore dynaconf secret files
 .secrets.*
+.envrc

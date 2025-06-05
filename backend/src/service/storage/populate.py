@@ -1,10 +1,12 @@
+import os
 from src.internal.models.repo import Repository
 from src.internal.crud.repo import create_repository
 import requests
 from src.internal.logger import logger
 import uuid
 
-def store_link(fullname: str)->Repository:
+def store_link(fullname: str)->Repository|None:
+
     url = f"https://api.github.com/repos/{fullname}"
     repo_data = load_link(url)
     readme_content = fetch_readme(fullname)
@@ -37,11 +39,19 @@ def store_link(fullname: str)->Repository:
     )
 
     # Persist to database
-    return create_repository(new_repo)
+    result = create_repository(new_repo)
+    if result:
+        return result
+    return None
 
 def load_link(url: str) -> dict | None:
     try:
-        response = requests.get(url)
+        GITHUB_TOKEN = os.getenv("GH_API_KEY")
+        headers = {
+            "Authorization": f"token {GITHUB_TOKEN}",
+            "Accept": "application/vnd.github+json"
+        }
+        response = requests.get(url,headers)
         response.raise_for_status()
         return response.json()
     except requests.exceptions.RequestException as e:

@@ -1,4 +1,6 @@
 from src.internal.logger import logger
+import csv
+from queue import Queue
 from typing import Union
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -28,9 +30,23 @@ def StartServer(app:FastAPI):
     def register_repo(request: RegisterRequest):
         fullname = request.fullname
         repo = store_link(fullname=fullname)
-        index.centralIndexer(repo,sh)
-        return {"message": f"Repository {fullname} registered successfully"}
+        if repo:
+            index.centralIndexer(repo,sh)
+            return {"message": f"Repository {fullname} registered successfully"}
     @app.post("/query")
     def query(request: QueryRequest):
         repo_list = qengine.query(request.query)
         return repo_list
+    @app.post("/load")
+    def load():
+        repo_queue = Queue()
+        with open('repos.csv', newline='', encoding='utf-8') as csvfile:
+            reader = csv.DictReader(csvfile)
+            for row in reader:
+                full_name = f"{row['username']}/{row['repo_name']}"
+                repo_queue.put(full_name)
+        while not repo_queue.empty():
+            repo = repo_queue.get()
+            if repo:
+                store_link(fullname=repo)
+                index.centralIndexer(repo,sh)

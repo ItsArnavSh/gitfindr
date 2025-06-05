@@ -3,13 +3,20 @@ from src.internal.session import SessionLocal
 from dataclasses import asdict
 from typing import List
 from sqlalchemy.sql import func
-def create_repository(repo_data: Repository)->Repository:
+from sqlalchemy.exc import SQLAlchemyError
+def create_repository(repo_data: Repository) -> Repository | None:
     db = SessionLocal()
-    db.add(repo_data)
-    db.commit()
-    db.refresh(repo_data)
-    db.close()
-    return repo_data
+    try:
+        db.add(repo_data)
+        db.commit()
+        db.refresh(repo_data)
+        return repo_data
+    except SQLAlchemyError as e:
+        db.rollback()
+        print(f"Database error: {e}")  # Replace with proper logging in production
+        return None
+    finally:
+        db.close()
 def get_repository_by_id(repo_id: int)->Repository|None:
     db = SessionLocal()
     repo = db.query(Repository).filter(Repository.id == repo_id).first()
