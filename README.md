@@ -2,7 +2,7 @@
 
 ### The Google for GitHub
 
-## 📌 Introduction
+## Introduction
 
 GitFindr is an search tool that enhances repository discovery by combining **BM25-based ranking** with **semantic search** using transformer-based embeddings. It refines search results using repository statistics like ** stars, forks, and clicks**, providing highly relevant rankings.
 
