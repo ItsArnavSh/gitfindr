@@ -1,12 +1,12 @@
-# 🚀 GitFindr
+# GitFindr
 
-### 🔎 The Google for GitHub
+### The Google for GitHub
 
 ## 📌 Introduction
 
-GitFindr is an advanced search tool that enhances repository discovery by combining **BM25-based ranking** with **semantic search** using transformer-based embeddings. It refines search results using repository statistics like **⭐ stars, 🍴 forks, and 👀 clicks**, providing highly relevant rankings.
+GitFindr is an search tool that enhances repository discovery by combining **BM25-based ranking** with **semantic search** using transformer-based embeddings. It refines search results using repository statistics like ** stars, forks, and clicks**, providing highly relevant rankings.
 
-## 🤔 Why GitFindr?
+## Why GitFindr?
 
 GitHub's built-in search often fails to provide the most relevant repositories due to its reliance on basic keyword matching. Many great projects remain undiscovered because:
 
@@ -16,11 +16,11 @@ GitHub's built-in search often fails to provide the most relevant repositories d
 
 GitFindr fixes these issues by introducing README scanning and semantic matching, ensuring that even loosely related terms surface the right repositories. By leveraging a hybrid **BM25 + embedding search**, GitFindr delivers more precise and meaningful results.
 
-## ⚙️ How It Works
+## How It Works
 
 GitFindr is now built fully in **Python**, utilizing **FastAPI**, **PostgreSQL with pgvector**, and **sentence-transformers** for semantic indexing.
 
-### 🔍 Indexing & Search Optimization
+### Indexing & Search Optimization
 
 1. **Embedding-Based Semantic Search**:
 
@@ -52,7 +52,7 @@ GitFindr is now built fully in **Python**, utilizing **FastAPI**, **PostgreSQL w
 
 This combined approach ensures both exact keyword matches and semantically similar results are surfaced accurately.
 
-## 📊 BM25 Calculation
+## BM25 Calculation
 
 GitFindr still enhances BM25 ranking by incorporating interaction metrics. Below is the **BM25S formula** used:
 
@@ -62,7 +62,7 @@ $$
 
 Where:
 
-* **📖 Inverse Document Frequency (IDF):**
+* ** Inverse Document Frequency (IDF):**
 
   $$
   IDF(q_i) = \log \left( \frac{N - df_i + 0.5}{df_i + 0.5} + 1 \right)
@@ -71,7 +71,7 @@ Where:
   * `N` = Total number of documents (repositories)
   * `df_i` = Number of documents containing term `i`
 
-* **📈 Term Frequency Weighting:**
+* ** Term Frequency Weighting:**
 
   $$
   f(q_i, D) = \sum_{b} v_b \cdot qd_i^b
@@ -80,7 +80,7 @@ Where:
   * `v_b` = Frequency weight of field `b`
   * `qd_i^b` = Total occurrences of `q_i` in field `b` of document `D`
 
-* **⚖️ Scaling Factor (`K`):**
+* ** Scaling Factor (`K`):**
 
   $$
   K = k_1 \cdot \frac{\text{avg term freq in dataset}}{\text{avg term freq in dataset after weighting}}
@@ -88,25 +88,25 @@ Where:
 
   * `k_1` is a tunable parameter (`k_1 ∈ [1.2, 2.0]`)
 
-* **📊 Additional Weighting (`alt`):**
+* ** Additional Weighting (`alt`):**
 
   $$
   alt = (1 + \sum_{i} \alpha_i \log (1 + x_i))
   $$
 
-  * `x_i` represents repository statistics (**⭐ stars, 🍴 forks, 👀 clicks**)
+  * `x_i` represents repository statistics (** stars, 🍴 forks,  clicks**)
   * `α_i` is a tuning constant
 
-## 🛠️ Installation & Usage
+##  Installation & Usage
 
-### 📂 Project Structure
+###  Project Structure
 
 GitFindr consists of two main folders:
 
 * **Frontend**: The UI for searching repositories.
 * **Backend**: Handles indexing, searching, and processing.
 
-### 🚀 Frontend Setup
+###  Frontend Setup
 
 1. Navigate to the frontend directory:
 
@@ -126,7 +126,7 @@ GitFindr consists of two main folders:
    npm run dev
    ```
 
-### 🔧 Backend Setup
+###  Backend Setup
 
 1. **Start PostgreSQL with pgvector support using Docker**
 
@@ -153,7 +153,7 @@ GitFindr consists of two main folders:
 
    This will install Python dependencies and launch the FastAPI server.
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! Please follow these steps:
 
@@ -163,6 +163,6 @@ We welcome contributions! Please follow these steps:
 4. **Push to your branch** (`git push origin feature-branch`).
 5. **Open a pull request**.
 
-## 🎯 Vision
+##  Vision
 
-GitFindr envisions a community where people can discover and submit their ideas, ensuring that no idea gets buried and every project gets a fair chance to be seen. 🚀
+GitFindr envisions a community where people can discover and submit their ideas, ensuring that no idea gets buried and every project gets a fair chance to be seen. 
